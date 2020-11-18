@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Map;
 
 import org.springframework.aop.RawTargetAccess;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.request.RequestPostProcessor;
@@ -642,6 +643,11 @@ public class MockMvcRequestSpecificationProxyTarget implements MockMvcRequestSpe
                                                       RequestPostProcessor... additionalPostProcessors)
     {
         return target.postProcessors(postProcessor, additionalPostProcessors);
+    }
+
+    public MockMvcRequestSpecification accept(MediaType... mediaTypes)
+    {
+        return target.accept(mediaTypes);
     }
 
 }
