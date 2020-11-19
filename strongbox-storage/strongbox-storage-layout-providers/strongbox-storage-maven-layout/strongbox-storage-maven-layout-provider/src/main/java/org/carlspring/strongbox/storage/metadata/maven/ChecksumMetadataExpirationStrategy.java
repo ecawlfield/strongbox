@@ -3,14 +3,14 @@ package org.carlspring.strongbox.storage.metadata.maven;
 import org.carlspring.commons.encryption.EncryptionAlgorithmsEnum;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.providers.repository.proxied.ProxyRepositoryArtifactResolver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.file.Files;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import static org.carlspring.strongbox.storage.metadata.maven.MetadataExpirationStrategy.Decision.*;
 
 @Component

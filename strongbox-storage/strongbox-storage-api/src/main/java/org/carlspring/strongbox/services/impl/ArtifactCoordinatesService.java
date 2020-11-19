@@ -1,14 +1,15 @@
 package org.carlspring.strongbox.services.impl;
 
-import com.orientechnologies.orient.core.id.ORID;
-import com.orientechnologies.orient.core.record.impl.ODocument;
-import com.orientechnologies.orient.core.sql.query.OSQLSynchQuery;
+import java.util.HashMap;
+import java.util.List;
+
 import org.carlspring.strongbox.artifact.coordinates.AbstractArtifactCoordinates;
 import org.carlspring.strongbox.data.service.CommonCrudService;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
-import java.util.List;
+import com.orientechnologies.orient.core.id.ORID;
+import com.orientechnologies.orient.core.record.impl.ODocument;
+import com.orientechnologies.orient.core.sql.query.OSQLSynchQuery;
 
 @Component
 public class ArtifactCoordinatesService extends CommonCrudService<AbstractArtifactCoordinates>

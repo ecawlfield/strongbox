@@ -1,10 +1,16 @@
 package org.carlspring.strongbox.cron.jobs;
 
-import org.apache.commons.lang.StringUtils;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.services.CronTaskConfigurationService;
 import org.carlspring.strongbox.event.cron.CronTaskEvent;
 import org.carlspring.strongbox.event.cron.CronTaskEventTypeEnum;
+
+import javax.inject.Inject;
+import java.lang.reflect.Method;
+import java.util.Optional;
+import java.util.UUID;
+
+import org.apache.commons.lang.StringUtils;
 import org.junit.jupiter.api.TestInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,11 +19,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
-
-import javax.inject.Inject;
-import java.lang.reflect.Method;
-import java.util.Optional;
-import java.util.UUID;
 
 /**
  * @author carlspring

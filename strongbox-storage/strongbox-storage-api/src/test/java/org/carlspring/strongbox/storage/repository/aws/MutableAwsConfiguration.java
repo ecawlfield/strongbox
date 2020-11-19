@@ -1,9 +1,10 @@
 package org.carlspring.strongbox.storage.repository.aws;
 
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import org.carlspring.strongbox.storage.repository.CustomConfiguration;
 import org.carlspring.strongbox.storage.repository.MutableCustomConfiguration;
 import org.carlspring.strongbox.yaml.CustomTag;
+
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * @author carlspring

@@ -1,8 +1,8 @@
 package org.carlspring.strongbox.storage.repository.remote.heartbeat.monitor;
 
-import org.springframework.stereotype.Component;
-
 import javax.inject.Inject;
+
+import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

@@ -1,12 +1,11 @@
 package org.carlspring.strongbox.configuration;
 
-import com.google.common.collect.ImmutableSortedMap;
-import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.StorageData;
 import org.carlspring.strongbox.storage.StorageDto;
+import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.HttpConnectionPool;
-import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.RepositoryData;
+import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.RepositoryTypeEnum;
 import org.carlspring.strongbox.storage.routing.MutableRoutingRules;
 import org.carlspring.strongbox.storage.routing.RoutingRules;
@@ -16,6 +15,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.google.common.collect.ImmutableSortedMap;
 import static java.util.stream.Collectors.toMap;
 
 /**

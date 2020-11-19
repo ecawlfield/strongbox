@@ -1,9 +1,9 @@
 package org.carlspring.strongbox.storage.routing;
 
-import org.apache.commons.lang3.StringUtils;
-
 import javax.annotation.concurrent.Immutable;
 import java.util.StringJoiner;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author Przemyslaw Fusik

@@ -1,7 +1,8 @@
 package org.carlspring.strongbox.domain;
 
-import org.apache.maven.index.artifact.Gav;
 import org.carlspring.strongbox.artifact.MavenArtifactUtils;
+
+import org.apache.maven.index.artifact.Gav;
 
 /**
  * @author Przemyslaw Fusik

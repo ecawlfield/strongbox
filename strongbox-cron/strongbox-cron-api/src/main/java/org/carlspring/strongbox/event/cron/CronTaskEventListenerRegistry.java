@@ -1,11 +1,12 @@
 package org.carlspring.strongbox.event.cron;
 
 import org.carlspring.strongbox.event.AbstractEventListenerRegistry;
+
+import java.util.UUID;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import java.util.UUID;
 
 /**
  * @author carlspring

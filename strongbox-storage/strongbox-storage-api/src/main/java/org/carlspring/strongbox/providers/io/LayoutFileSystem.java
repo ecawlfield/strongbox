@@ -1,11 +1,5 @@
 package org.carlspring.strongbox.providers.io;
 
-import org.carlspring.strongbox.booters.PropertiesBooter;
-import org.carlspring.strongbox.io.StorageFileSystem;
-import org.carlspring.strongbox.providers.layout.LayoutFileSystemProvider;
-import org.carlspring.strongbox.providers.layout.LayoutProvider;
-import org.carlspring.strongbox.storage.repository.Repository;
-
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.FileSystem;
@@ -13,6 +7,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Optional;
 import java.util.Set;
+
+import org.carlspring.strongbox.booters.PropertiesBooter;
+import org.carlspring.strongbox.io.StorageFileSystem;
+import org.carlspring.strongbox.providers.layout.LayoutFileSystemProvider;
+import org.carlspring.strongbox.providers.layout.LayoutProvider;
+import org.carlspring.strongbox.storage.repository.Repository;
 
 /**
  * This class decorates {@link StorageFileSystem} with common layout specific

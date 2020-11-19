@@ -1,10 +1,10 @@
 package org.carlspring.strongbox.storage.metadata;
 
+import java.util.HashMap;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
-import java.util.HashMap;
 
 /**
  * Created by dinesh on 1/4/18.

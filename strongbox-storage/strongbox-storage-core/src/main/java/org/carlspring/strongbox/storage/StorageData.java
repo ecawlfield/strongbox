@@ -1,13 +1,8 @@
 package org.carlspring.strongbox.storage;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.google.common.collect.ImmutableSortedMap;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.carlspring.strongbox.json.MapValuesJsonSerializer;
-import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.RepositoryData;
+import org.carlspring.strongbox.storage.repository.Repository;
 
 import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,6 +10,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import java.util.Collections;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.google.common.collect.ImmutableSortedMap;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import static java.util.stream.Collectors.toMap;
 
 /**

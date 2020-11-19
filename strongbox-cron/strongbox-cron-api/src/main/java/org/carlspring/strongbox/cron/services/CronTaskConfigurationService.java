@@ -3,10 +3,11 @@ package org.carlspring.strongbox.cron.services;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.domain.CronTasksConfigurationDto;
 import org.carlspring.strongbox.cron.exceptions.CronTaskNotFoundException;
-import org.quartz.SchedulerException;
 
 import java.io.IOException;
 import java.util.UUID;
+
+import org.quartz.SchedulerException;
 
 /**
  * @author Pablo Tirado

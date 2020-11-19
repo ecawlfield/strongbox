@@ -1,10 +1,5 @@
 package org.carlspring.strongbox.artifact.generator;
 
-import org.apache.commons.codec.digest.MessageDigestAlgorithms;
-import org.carlspring.strongbox.io.LayoutOutputStream;
-import org.carlspring.strongbox.util.MessageDigestUtils;
-import org.carlspring.strongbox.util.TestFileUtils;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URI;
@@ -13,6 +8,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.security.NoSuchAlgorithmException;
+
+import org.apache.commons.codec.digest.MessageDigestAlgorithms;
+import org.carlspring.strongbox.io.LayoutOutputStream;
+import org.carlspring.strongbox.util.MessageDigestUtils;
+import org.carlspring.strongbox.util.TestFileUtils;
 
 /**
  * @author sbespalov

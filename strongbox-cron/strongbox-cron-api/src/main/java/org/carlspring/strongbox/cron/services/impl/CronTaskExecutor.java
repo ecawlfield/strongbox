@@ -1,5 +1,13 @@
 package org.carlspring.strongbox.cron.services.impl;
 
+import java.lang.reflect.Field;
+import java.util.Optional;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 import org.carlspring.strongbox.log.CronTaskContextAcceptFilter;
 import org.carlspring.strongbox.log.LoggingUtils;
 import org.quartz.Job;
@@ -11,10 +19,6 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.util.ReflectionUtils;
-
-import java.lang.reflect.Field;
-import java.util.Optional;
-import java.util.concurrent.*;
 
 public class CronTaskExecutor extends ThreadPoolExecutor implements DisposableBean
 {

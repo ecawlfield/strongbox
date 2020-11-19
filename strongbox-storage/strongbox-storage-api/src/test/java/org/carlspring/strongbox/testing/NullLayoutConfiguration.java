@@ -1,20 +1,21 @@
 package org.carlspring.strongbox.testing;
 
+import java.nio.file.FileSystem;
+import java.nio.file.spi.FileSystemProvider;
+
+import javax.inject.Inject;
+
 import org.carlspring.strongbox.artifact.coordinates.RawArtifactCoordinates;
 import org.carlspring.strongbox.booters.PropertiesBooter;
+import org.carlspring.strongbox.providers.storage.StorageProvider;
+import org.carlspring.strongbox.providers.storage.StorageProviderRegistry;
 import org.carlspring.strongbox.providers.io.LayoutFileSystemFactory;
 import org.carlspring.strongbox.providers.io.LayoutFileSystemProviderFactory;
 import org.carlspring.strongbox.providers.layout.LayoutFileSystemProvider;
-import org.carlspring.strongbox.providers.storage.StorageProvider;
-import org.carlspring.strongbox.providers.storage.StorageProviderRegistry;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-
-import javax.inject.Inject;
-import java.nio.file.FileSystem;
-import java.nio.file.spi.FileSystemProvider;
 
 @Configuration
 public class NullLayoutConfiguration

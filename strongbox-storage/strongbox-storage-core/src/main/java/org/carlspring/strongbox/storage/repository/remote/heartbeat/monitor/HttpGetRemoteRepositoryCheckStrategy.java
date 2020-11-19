@@ -1,16 +1,17 @@
 package org.carlspring.strongbox.storage.repository.remote.heartbeat.monitor;
 
+import org.carlspring.strongbox.service.ProxyRepositoryConnectionPoolConfigurationService;
+
+import javax.inject.Inject;
+import java.io.IOException;
+
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.carlspring.strongbox.service.ProxyRepositoryConnectionPoolConfigurationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import javax.inject.Inject;
-import java.io.IOException;
 
 /**
  * @author Przemyslaw Fusik

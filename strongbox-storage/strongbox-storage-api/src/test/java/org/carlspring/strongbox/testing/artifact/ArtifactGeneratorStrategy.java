@@ -1,10 +1,10 @@
 package org.carlspring.strongbox.testing.artifact;
 
-import org.carlspring.strongbox.artifact.generator.ArtifactGenerator;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Map;
+
+import org.carlspring.strongbox.artifact.generator.ArtifactGenerator;
 
 /**
  * @author sbespalov

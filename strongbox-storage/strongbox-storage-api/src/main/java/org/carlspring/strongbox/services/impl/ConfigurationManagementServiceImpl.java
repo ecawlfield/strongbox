@@ -1,9 +1,5 @@
 package org.carlspring.strongbox.services.impl;
 
-import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.collections4.MapUtils;
-import org.apache.commons.lang3.SerializationUtils;
-import org.apache.commons.lang3.mutable.MutableBoolean;
 import org.carlspring.strongbox.client.MutableRemoteRepositoryRetryArtifactDownloadConfiguration;
 import org.carlspring.strongbox.configuration.*;
 import org.carlspring.strongbox.event.repository.RepositoryEvent;
@@ -16,13 +12,10 @@ import org.carlspring.strongbox.services.ConfigurationManagementService;
 import org.carlspring.strongbox.storage.StorageDto;
 import org.carlspring.strongbox.storage.repository.*;
 import org.carlspring.strongbox.storage.routing.MutableRoutingRule;
-import org.carlspring.strongbox.storage.routing.MutableRoutingRules;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+
 import java.io.IOException;
 import java.lang.reflect.UndeclaredThrowableException;
 import java.util.*;
@@ -30,6 +23,15 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.Consumer;
+
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.MapUtils;
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.commons.lang3.mutable.MutableBoolean;
+import org.carlspring.strongbox.storage.routing.MutableRoutingRules;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.support.TransactionTemplate;
 
 /**
  * @author mtodorov

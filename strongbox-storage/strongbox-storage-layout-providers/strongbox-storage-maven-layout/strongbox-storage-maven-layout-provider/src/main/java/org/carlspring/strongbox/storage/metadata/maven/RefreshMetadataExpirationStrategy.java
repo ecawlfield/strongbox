@@ -1,9 +1,10 @@
 package org.carlspring.strongbox.storage.metadata.maven;
 
 import org.carlspring.strongbox.providers.io.RepositoryPath;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+
+import org.springframework.stereotype.Component;
 
 @Component
 public class RefreshMetadataExpirationStrategy

@@ -1,12 +1,13 @@
 package org.carlspring.strongbox.storage.repository.remote;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.carlspring.strongbox.yaml.repository.remote.CustomRemoteRepositoryConfigurationData;
 import org.carlspring.strongbox.yaml.repository.remote.RemoteRepositoryConfigurationDto;
 
 import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * @author Przemyslaw Fusik

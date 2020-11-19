@@ -1,9 +1,10 @@
 package org.carlspring.strongbox.cron.jobs;
 
 import org.carlspring.strongbox.cron.jobs.fields.CronJobField;
-import org.springframework.util.Assert;
 
 import java.util.Set;
+
+import org.springframework.util.Assert;
 
 /**
  * @author Przemyslaw Fusik

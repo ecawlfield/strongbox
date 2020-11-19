@@ -1,17 +1,18 @@
 package org.carlspring.strongbox.storage.indexing.local;
 
+import org.carlspring.strongbox.artifact.coordinates.MavenArtifactCoordinates;
+import org.carlspring.strongbox.domain.ArtifactArchiveListing;
+import org.carlspring.strongbox.domain.ArtifactEntry;
+
+import java.util.Set;
+
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.index.ArtifactContext;
 import org.apache.maven.index.ArtifactInfo;
 import org.apache.maven.index.creator.JarFileContentsIndexCreator;
-import org.carlspring.strongbox.artifact.coordinates.MavenArtifactCoordinates;
-import org.carlspring.strongbox.domain.ArtifactArchiveListing;
-import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Set;
 
 /**
  * @author Przemyslaw Fusik

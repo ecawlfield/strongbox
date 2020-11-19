@@ -7,13 +7,14 @@ import org.carlspring.strongbox.services.TrustStoreService;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.RepositoryData;
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepository;
+
+import javax.inject.Inject;
+import java.io.IOException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
-
-import javax.inject.Inject;
-import java.io.IOException;
 
 /**
  * @author Przemyslaw Fusik

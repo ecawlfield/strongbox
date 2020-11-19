@@ -7,7 +7,11 @@ import org.carlspring.strongbox.data.criteria.Expression.ExpOperator;
 import org.carlspring.strongbox.data.criteria.Predicate;
 import org.carlspring.strongbox.data.criteria.Predicate.BooleanOperator;
 import org.carlspring.strongbox.data.criteria.Selector;
-import org.carlspring.strongbox.nuget.filter.NugetODataFilterParser.*;
+import org.carlspring.strongbox.nuget.filter.NugetODataFilterParser.FilterContext;
+import org.carlspring.strongbox.nuget.filter.NugetODataFilterParser.FilterExpContext;
+import org.carlspring.strongbox.nuget.filter.NugetODataFilterParser.TokenExpContext;
+import org.carlspring.strongbox.nuget.filter.NugetODataFilterParser.TokenExpFunctionContext;
+import org.carlspring.strongbox.nuget.filter.NugetODataFilterParser.TokenExpLeftContext;
 
 /**
  * This class purpose is to construct {@link Predicate} instance which can be

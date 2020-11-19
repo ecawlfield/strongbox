@@ -1,5 +1,24 @@
 package org.carlspring.strongbox.storage.metadata;
 
+import org.carlspring.strongbox.storage.metadata.maven.io.filters.ArtifactVersionDirectoryFilter;
+import org.carlspring.strongbox.storage.metadata.maven.comparators.MetadataVersionComparator;
+import org.carlspring.strongbox.storage.metadata.maven.comparators.SnapshotVersionComparator;
+import org.carlspring.strongbox.storage.metadata.maven.versions.MetadataVersion;
+import org.carlspring.strongbox.storage.metadata.maven.visitors.ArtifactVersionDirectoryVisitor;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import com.google.common.collect.Lists;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.maven.artifact.Artifact;
@@ -14,27 +33,9 @@ import org.apache.maven.index.artifact.M2GavCalculator;
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.apache.maven.plugin.descriptor.PluginDescriptor;
-import org.carlspring.strongbox.storage.metadata.maven.comparators.MetadataVersionComparator;
-import org.carlspring.strongbox.storage.metadata.maven.comparators.SnapshotVersionComparator;
-import org.carlspring.strongbox.storage.metadata.maven.io.filters.ArtifactVersionDirectoryFilter;
-import org.carlspring.strongbox.storage.metadata.maven.versions.MetadataVersion;
-import org.carlspring.strongbox.storage.metadata.maven.visitors.ArtifactVersionDirectoryVisitor;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * @author stodorov

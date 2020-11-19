@@ -1,15 +1,16 @@
 package org.carlspring.strongbox.providers.repository.proxied;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+
+import javax.ws.rs.core.Response;
+
 import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
 import org.carlspring.strongbox.client.CloseableRestResponse;
 import org.carlspring.strongbox.client.RestArtifactResolver;
 import org.carlspring.strongbox.providers.io.RepositoryFiles;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
-
-import javax.ws.rs.core.Response;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
 
 public class RemoteArtifactStreamFetcher
 {

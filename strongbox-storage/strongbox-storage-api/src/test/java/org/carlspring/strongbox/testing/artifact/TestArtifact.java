@@ -1,13 +1,17 @@
 package org.carlspring.strongbox.testing.artifact;
 
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.nio.file.Path;
+
 import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
 import org.carlspring.strongbox.artifact.generator.ArtifactGenerator;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.Repository;
-
-import java.lang.annotation.*;
-import java.nio.file.Path;
 
 /**
  * This annotation provide ability to inject Artifact {@link Path} instance as

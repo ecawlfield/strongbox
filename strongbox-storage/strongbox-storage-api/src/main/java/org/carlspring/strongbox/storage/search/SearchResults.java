@@ -1,10 +1,10 @@
 package org.carlspring.strongbox.storage.search;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 /**
  * @author mtodorov

@@ -1,14 +1,15 @@
 package org.carlspring.strongbox.configuration;
 
-import com.fasterxml.jackson.annotation.JsonRootName;
-import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
 import org.carlspring.strongbox.storage.StorageDto;
 import org.carlspring.strongbox.storage.routing.MutableRoutingRules;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonRootName;
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
 
 /**
  * @author mtodorov

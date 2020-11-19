@@ -1,5 +1,12 @@
 package org.carlspring.strongbox.artifact;
 
+import org.carlspring.strongbox.providers.io.RepositoryPath;
+
+import java.io.File;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.artifact.handler.ArtifactHandler;
@@ -10,12 +17,6 @@ import org.apache.maven.artifact.versioning.ArtifactVersion;
 import org.apache.maven.artifact.versioning.VersionRange;
 import org.apache.maven.index.artifact.Gav;
 import org.apache.maven.index.artifact.VersionUtils;
-import org.carlspring.strongbox.providers.io.RepositoryPath;
-
-import java.io.File;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Przemyslaw Fusik

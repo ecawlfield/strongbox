@@ -1,6 +1,5 @@
 package org.carlspring.strongbox.artifact;
 
-import com.orientechnologies.common.concur.ONeedRetryException;
 import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.event.AsyncEventListener;
 import org.carlspring.strongbox.event.artifact.ArtifactEvent;
@@ -9,16 +8,18 @@ import org.carlspring.strongbox.providers.io.RepositoryFiles;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.providers.io.RepositoryPathLock;
 import org.carlspring.strongbox.services.ArtifactEntryService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.transaction.ChainedTransactionManager;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.lang.reflect.UndeclaredThrowableException;
 import java.util.concurrent.locks.Lock;
+
+import com.orientechnologies.common.concur.ONeedRetryException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.transaction.ChainedTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.support.TransactionTemplate;
 
 public abstract class AsyncArtifactEntryHandler
 {

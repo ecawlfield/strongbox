@@ -1,17 +1,18 @@
 package org.carlspring.strongbox.services.impl;
 
+import java.io.IOException;
+
+import javax.inject.Inject;
+
 import org.carlspring.strongbox.services.ConfigurationManagementService;
 import org.carlspring.strongbox.services.RepositoryManagementService;
 import org.carlspring.strongbox.services.StorageManagementService;
-import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.StorageDto;
+import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import javax.inject.Inject;
-import java.io.IOException;
 
 /**
  * @author mtodorov

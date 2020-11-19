@@ -1,16 +1,17 @@
 package org.carlspring.strongbox.storage.indexing;
 
+import org.carlspring.strongbox.providers.io.RepositoryPath;
+
+import java.io.IOException;
+import java.nio.file.Files;
+
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.maven.index.context.IndexingContext;
 import org.apache.maven.index.incremental.DefaultIncrementalHandler;
 import org.apache.maven.index.packer.DefaultIndexPacker;
 import org.apache.maven.index.packer.IndexPackingRequest;
-import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-import java.nio.file.Files;
 
 /**
  * @author Przemyslaw Fusik

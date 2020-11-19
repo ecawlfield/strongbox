@@ -7,9 +7,10 @@ import org.carlspring.strongbox.storage.indexing.RepositoryIndexDirectoryPathRes
 import org.carlspring.strongbox.storage.indexing.RepositoryIndexingContextFactory.RepositoryIndexingContextFactoryQualifier;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepository;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+
+import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

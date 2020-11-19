@@ -1,10 +1,10 @@
 package org.carlspring.strongbox.client;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Implements basic API for artifact processing. Subclasses may specify particular remote method implementations.

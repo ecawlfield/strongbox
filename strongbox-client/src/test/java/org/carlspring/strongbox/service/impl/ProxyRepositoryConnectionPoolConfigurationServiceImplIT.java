@@ -2,17 +2,17 @@ package org.carlspring.strongbox.service.impl;
 
 import org.carlspring.strongbox.config.ClientConfig;
 import org.carlspring.strongbox.service.ProxyRepositoryConnectionPoolConfigurationService;
+
+import javax.inject.Inject;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.core.Response;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
-
-import javax.inject.Inject;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.core.Response;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

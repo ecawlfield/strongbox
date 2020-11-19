@@ -1,11 +1,11 @@
 package org.carlspring.strongbox.aql.grammar;
 
+import java.util.Optional;
+
 import org.carlspring.strongbox.aql.grammar.AQLParser.OrderExpContext;
 import org.carlspring.strongbox.aql.grammar.AQLParser.PageExpContext;
 import org.carlspring.strongbox.data.criteria.Paginator;
 import org.carlspring.strongbox.data.criteria.Paginator.Order;
-
-import java.util.Optional;
 
 /**
  * @author sbespalov

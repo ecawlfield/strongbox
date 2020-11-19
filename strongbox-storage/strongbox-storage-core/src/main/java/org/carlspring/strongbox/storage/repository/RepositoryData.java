@@ -1,33 +1,34 @@
 package org.carlspring.strongbox.storage.repository;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-import org.apache.commons.lang3.StringUtils;
-import org.carlspring.strongbox.configuration.MutableProxyConfiguration;
-import org.carlspring.strongbox.configuration.ProxyConfiguration;
-import org.carlspring.strongbox.json.MapValuesJsonSerializer;
-import org.carlspring.strongbox.json.StringArrayToMapJsonDeserializer;
-import org.carlspring.strongbox.storage.Storage;
-import org.carlspring.strongbox.storage.StorageData;
-import org.carlspring.strongbox.storage.repository.remote.RemoteRepositoryData;
-import org.carlspring.strongbox.storage.repository.remote.RemoteRepositoryDto;
-import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfiguration;
-import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfigurationDto;
-import org.carlspring.strongbox.yaml.repository.RepositoryConfiguration;
+import static org.carlspring.strongbox.util.CustomStreamCollectors.toLinkedHashMap;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import java.util.*;
-import java.util.stream.Collectors;
 
-import static org.carlspring.strongbox.util.CustomStreamCollectors.toLinkedHashMap;
+import org.carlspring.strongbox.configuration.MutableProxyConfiguration;
+import org.carlspring.strongbox.configuration.ProxyConfiguration;
+import org.carlspring.strongbox.json.MapValuesJsonSerializer;
+import org.carlspring.strongbox.json.StringArrayToMapJsonDeserializer;
+import org.carlspring.strongbox.storage.StorageData;
+import org.carlspring.strongbox.storage.Storage;
+import org.carlspring.strongbox.storage.repository.remote.RemoteRepositoryDto;
+import org.carlspring.strongbox.storage.repository.remote.RemoteRepositoryData;
+import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfiguration;
+import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfigurationDto;
+import org.carlspring.strongbox.yaml.repository.RepositoryConfiguration;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author Przemyslaw Fusik

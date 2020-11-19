@@ -2,11 +2,12 @@ package org.carlspring.strongbox.services.impl;
 
 import org.carlspring.strongbox.services.VersionValidatorService;
 import org.carlspring.strongbox.storage.validation.ArtifactCoordinatesValidator;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+import org.springframework.stereotype.Component;
 
 /**
  * @author mtodorov

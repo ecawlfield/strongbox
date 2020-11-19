@@ -1,12 +1,14 @@
 package org.carlspring.strongbox.artifact.generator;
 
-import org.apache.commons.io.IOUtils;
-import org.springframework.core.io.ClassPathResource;
+import org.carlspring.strongbox.testing.artifact.LicenseConfiguration;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URI;
 import java.nio.file.Path;
+
+import org.apache.commons.io.IOUtils;
+import org.springframework.core.io.ClassPathResource;
 
 /**
  * @author sbespalov

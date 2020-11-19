@@ -1,13 +1,14 @@
 package org.carlspring.strongbox.yaml.configuration.repository;
 
-import com.fasterxml.jackson.annotation.JsonTypeName;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.carlspring.strongbox.providers.layout.Maven2LayoutProvider;
 import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfiguration;
 
 import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * @author Przemyslaw Fusik

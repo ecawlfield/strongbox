@@ -3,14 +3,14 @@ package org.carlspring.strongbox.storage.validation.version;
 import org.carlspring.strongbox.StorageApiTestConfig;
 import org.carlspring.strongbox.data.CacheManagerTestExecutionListener;
 import org.carlspring.strongbox.services.VersionValidatorService;
+
+import javax.inject.Inject;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
-
-import javax.inject.Inject;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

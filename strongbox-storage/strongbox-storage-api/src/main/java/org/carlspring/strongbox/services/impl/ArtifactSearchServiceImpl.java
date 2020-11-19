@@ -5,9 +5,10 @@ import org.carlspring.strongbox.providers.search.SearchException;
 import org.carlspring.strongbox.services.ArtifactSearchService;
 import org.carlspring.strongbox.storage.search.SearchRequest;
 import org.carlspring.strongbox.storage.search.SearchResults;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+
+import org.springframework.stereotype.Component;
 
 /**
  * @author mtodorov

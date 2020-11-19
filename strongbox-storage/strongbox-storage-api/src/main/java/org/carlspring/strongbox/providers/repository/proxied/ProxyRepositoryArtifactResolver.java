@@ -1,5 +1,14 @@
 package org.carlspring.strongbox.providers.repository.proxied;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+
+import javax.inject.Inject;
+
 import org.carlspring.strongbox.client.RestArtifactResolver;
 import org.carlspring.strongbox.event.artifact.ArtifactEventListenerRegistry;
 import org.carlspring.strongbox.providers.io.RepositoryFileAttributes;
@@ -12,14 +21,6 @@ import org.carlspring.strongbox.storage.repository.remote.heartbeat.RemoteReposi
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import javax.inject.Inject;
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
 
 /**
  * @author Przemyslaw Fusik

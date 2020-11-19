@@ -1,13 +1,13 @@
 package org.carlspring.strongbox.providers.repository;
 
+import java.io.IOException;
+import java.util.Date;
+
 import org.carlspring.strongbox.artifact.AsyncArtifactEntryHandler;
 import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.event.artifact.ArtifactEventTypeEnum;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.springframework.stereotype.Component;
-
-import java.io.IOException;
-import java.util.Date;
 
 @Component
 public class ArtifactDownloadingEventHandler extends AsyncArtifactEntryHandler

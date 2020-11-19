@@ -1,10 +1,11 @@
 package org.carlspring.strongbox.testing;
 
-import org.carlspring.strongbox.providers.layout.AbstractLayoutProvider;
-import org.carlspring.strongbox.providers.layout.LayoutFileSystemProvider;
+import java.nio.file.spi.FileSystemProvider;
 
 import javax.inject.Inject;
-import java.nio.file.spi.FileSystemProvider;
+
+import org.carlspring.strongbox.providers.layout.AbstractLayoutProvider;
+import org.carlspring.strongbox.providers.layout.LayoutFileSystemProvider;
 
 public class NullFileSystemProvider extends LayoutFileSystemProvider
 {

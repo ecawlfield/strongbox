@@ -2,13 +2,14 @@ package org.carlspring.strongbox.artifact.locator;
 
 import org.carlspring.strongbox.artifact.locator.handlers.ArtifactDirectoryOperation;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author mtodorov

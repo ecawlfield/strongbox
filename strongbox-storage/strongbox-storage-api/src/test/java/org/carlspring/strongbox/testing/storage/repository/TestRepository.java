@@ -6,10 +6,11 @@ import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.RepositoryPolicyEnum;
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepository;
 import org.carlspring.strongbox.storage.routing.RoutingRuleTypeEnum;
-import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.*;
 import java.net.URL;
+
+import org.springframework.core.annotation.AliasFor;
 
 /**
  * This annotation provide ability to inject {@link Repository} instance as test

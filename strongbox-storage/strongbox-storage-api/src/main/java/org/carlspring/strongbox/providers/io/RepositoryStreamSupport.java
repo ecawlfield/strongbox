@@ -1,20 +1,26 @@
 package org.carlspring.strongbox.providers.io;
 
-import org.apache.commons.io.input.CountingInputStream;
-import org.apache.commons.io.input.ProxyInputStream;
-import org.apache.commons.io.output.CountingOutputStream;
-import org.apache.commons.io.output.ProxyOutputStream;
-import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
-import org.carlspring.strongbox.io.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Path;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
+
+import org.apache.commons.io.input.CountingInputStream;
+import org.apache.commons.io.input.ProxyInputStream;
+import org.apache.commons.io.output.CountingOutputStream;
+import org.apache.commons.io.output.ProxyOutputStream;
+import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
+import org.carlspring.strongbox.io.LazyInputStream;
+import org.carlspring.strongbox.io.LazyOutputStream;
+import org.carlspring.strongbox.io.RepositoryStreamCallback;
+import org.carlspring.strongbox.io.RepositoryStreamContext;
+import org.carlspring.strongbox.io.RepositoryStreamReadContext;
+import org.carlspring.strongbox.io.RepositoryStreamWriteContext;
+import org.carlspring.strongbox.io.StreamUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author sbespalov

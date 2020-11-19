@@ -1,11 +1,11 @@
 package org.carlspring.strongbox.cron.domain;
 
-import com.google.common.collect.ImmutableList;
-
 import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Collections;
 import java.util.List;
+
+import com.google.common.collect.ImmutableList;
 
 /**
  * @author Przemyslaw Fusik

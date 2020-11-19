@@ -1,22 +1,17 @@
 package org.carlspring.strongbox.cron.services.impl;
 
-import org.apache.commons.lang3.SerializationUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.carlspring.strongbox.cron.config.CronTasksConfigurationFileManager;
 import org.carlspring.strongbox.cron.domain.CronTaskConfiguration;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.domain.CronTasksConfigurationDto;
-import org.carlspring.strongbox.cron.jobs.CronJobDuplicationCheckStrategiesRegistry;
 import org.carlspring.strongbox.cron.jobs.CronJobDuplicationCheckStrategy;
 import org.carlspring.strongbox.cron.jobs.CronJobsDefinitionsRegistry;
+import org.carlspring.strongbox.cron.jobs.CronJobDuplicationCheckStrategiesRegistry;
 import org.carlspring.strongbox.cron.services.CronTaskDataService;
 import org.carlspring.strongbox.cron.services.support.CronTaskConfigurationSearchCriteria;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
 import javax.inject.Inject;
+
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.locks.Lock;
@@ -25,6 +20,13 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 /**
  * @author Yougeshwar

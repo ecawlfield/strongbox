@@ -1,12 +1,13 @@
 package org.carlspring.strongbox.dependency.snippet;
 
 import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.stereotype.Component;
 
 @Component
 public class SnippetGenerator

@@ -1,8 +1,5 @@
 package org.carlspring.strongbox.storage.routing;
 
-import com.google.common.collect.ImmutableList;
-import org.apache.commons.lang3.StringUtils;
-
 import javax.annotation.concurrent.Immutable;
 import java.util.Collections;
 import java.util.List;
@@ -10,6 +7,9 @@ import java.util.StringJoiner;
 import java.util.UUID;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import com.google.common.collect.ImmutableList;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author Przemyslaw Fusik

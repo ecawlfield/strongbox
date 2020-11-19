@@ -2,8 +2,6 @@ package org.carlspring.strongbox.io;
 
 import org.carlspring.commons.io.MultipleDigestOutputStream;
 import org.carlspring.strongbox.util.MessageDigestUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -12,6 +10,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class decorates storage {@link OutputStream} with common layout specific logic.

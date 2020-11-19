@@ -1,8 +1,8 @@
 package org.carlspring.strongbox.storage.repository.remote;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.carlspring.strongbox.yaml.repository.remote.RemoteRepositoryConfigurationDto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import static org.carlspring.strongbox.configuration.MutableRemoteRepositoriesConfiguration.DEFAULT_HEARTBEAT_INTERVAL_SECONDS;
 
 /**

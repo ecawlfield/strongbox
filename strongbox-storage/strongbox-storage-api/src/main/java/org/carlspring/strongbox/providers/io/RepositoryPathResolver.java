@@ -6,11 +6,12 @@ import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.services.ArtifactEntryService;
 import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.Repository;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.util.Objects;
+
+import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

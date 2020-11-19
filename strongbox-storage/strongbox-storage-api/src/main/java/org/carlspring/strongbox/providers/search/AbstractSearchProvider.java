@@ -1,5 +1,11 @@
 package org.carlspring.strongbox.providers.search;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+
+import javax.inject.Inject;
+
 import org.carlspring.strongbox.configuration.Configuration;
 import org.carlspring.strongbox.configuration.ConfigurationManager;
 import org.carlspring.strongbox.dependency.snippet.CodeSnippet;
@@ -15,11 +21,6 @@ import org.carlspring.strongbox.storage.search.SearchRequest;
 import org.carlspring.strongbox.storage.search.SearchResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.inject.Inject;
-import java.io.IOException;
-import java.net.URL;
-import java.util.List;
 
 /**
  * @author carlspring

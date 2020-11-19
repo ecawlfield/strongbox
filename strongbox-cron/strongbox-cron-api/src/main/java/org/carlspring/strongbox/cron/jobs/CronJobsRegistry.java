@@ -1,13 +1,13 @@
 package org.carlspring.strongbox.cron.jobs;
 
-import com.google.common.collect.ImmutableSet;
-import org.reflections.Reflections;
-import org.springframework.stereotype.Component;
-
 import java.lang.reflect.Modifier;
 import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+
+import com.google.common.collect.ImmutableSet;
+import org.reflections.Reflections;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

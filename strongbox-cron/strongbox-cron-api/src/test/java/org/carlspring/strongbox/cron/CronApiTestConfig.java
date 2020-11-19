@@ -4,9 +4,6 @@ import org.carlspring.strongbox.config.ClientConfig;
 import org.carlspring.strongbox.config.CommonConfig;
 import org.carlspring.strongbox.cron.config.CronTasksConfig;
 import org.carlspring.strongbox.providers.repository.RepositoryProvider;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.test.context.ContextConfiguration;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,6 +12,9 @@ import java.lang.annotation.Target;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.test.context.ContextConfiguration;
 import static org.carlspring.strongbox.cron.CronApiTestConfig.TestConfig;
 
 /**

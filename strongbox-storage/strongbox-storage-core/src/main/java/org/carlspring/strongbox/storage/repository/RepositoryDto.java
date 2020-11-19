@@ -1,19 +1,20 @@
 package org.carlspring.strongbox.storage.repository;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.apache.commons.lang3.StringUtils;
 import org.carlspring.strongbox.configuration.MutableProxyConfiguration;
 import org.carlspring.strongbox.providers.storage.FileSystemStorageProvider;
-import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.StorageDto;
+import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepositoryDto;
 import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfigurationDto;
 
 import java.io.Serializable;
 import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author mtodorov

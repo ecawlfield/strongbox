@@ -1,13 +1,9 @@
 package org.carlspring.strongbox.cron.services.impl;
 
-import com.google.common.collect.ImmutableMap;
 import org.carlspring.strongbox.cron.CronApiTestConfig;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.jobs.TestJavaCronJob;
 import org.carlspring.strongbox.cron.services.CronTaskDataService;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -15,6 +11,10 @@ import java.util.Collection;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import com.google.common.collect.ImmutableMap;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

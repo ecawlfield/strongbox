@@ -1,10 +1,10 @@
 package org.carlspring.strongbox.artifact.locator.handlers;
 
-import org.carlspring.strongbox.providers.io.RepositoryPath;
-
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
+
+import org.carlspring.strongbox.providers.io.RepositoryPath;
 
 /**
  * @author mtodorov

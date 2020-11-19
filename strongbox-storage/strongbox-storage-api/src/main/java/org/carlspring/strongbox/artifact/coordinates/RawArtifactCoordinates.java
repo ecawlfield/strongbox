@@ -1,6 +1,7 @@
 package org.carlspring.strongbox.artifact.coordinates;
 
 import javax.persistence.Entity;
+
 import java.util.Map;
 import java.util.Optional;
 

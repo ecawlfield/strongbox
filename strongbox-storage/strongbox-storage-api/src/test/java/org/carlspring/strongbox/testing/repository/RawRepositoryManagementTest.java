@@ -1,9 +1,12 @@
 package org.carlspring.strongbox.testing.repository;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.carlspring.strongbox.StorageApiTestConfig;
 import org.carlspring.strongbox.artifact.coordinates.RawArtifactCoordinates;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.testing.storage.repository.RepositoryManagementTestExecutionListener;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.parallel.Execution;
@@ -11,8 +14,6 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author ankit.tomar

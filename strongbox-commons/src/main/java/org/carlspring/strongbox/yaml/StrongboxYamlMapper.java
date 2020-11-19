@@ -1,5 +1,8 @@
 package org.carlspring.strongbox.yaml;
 
+import javax.annotation.Nonnull;
+import java.util.*;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -9,9 +12,6 @@ import com.fasterxml.jackson.databind.jsontype.NamedType;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
-
-import javax.annotation.Nonnull;
-import java.util.*;
 
 /**
  * @author Pablo Tirado

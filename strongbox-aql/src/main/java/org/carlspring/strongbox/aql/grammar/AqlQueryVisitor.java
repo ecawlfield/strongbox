@@ -1,12 +1,12 @@
 package org.carlspring.strongbox.aql.grammar;
 
+import java.util.Optional;
+
 import org.carlspring.strongbox.aql.grammar.AQLParser.QueryExpContext;
 import org.carlspring.strongbox.aql.grammar.AQLParser.TokenExpContext;
 import org.carlspring.strongbox.data.criteria.Predicate;
 import org.carlspring.strongbox.data.criteria.Predicate.BooleanOperator;
 import org.carlspring.strongbox.domain.ArtifactEntryExpressionBuilder;
-
-import java.util.Optional;
 
 /**
  * @author sbespalov

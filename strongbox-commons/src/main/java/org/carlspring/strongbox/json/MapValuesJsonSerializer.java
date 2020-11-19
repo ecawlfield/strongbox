@@ -1,11 +1,11 @@
 package org.carlspring.strongbox.json;
 
+import java.io.IOException;
+import java.util.Map;
+
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-
-import java.io.IOException;
-import java.util.Map;
 
 /**
  * @author Przemyslaw Fusik

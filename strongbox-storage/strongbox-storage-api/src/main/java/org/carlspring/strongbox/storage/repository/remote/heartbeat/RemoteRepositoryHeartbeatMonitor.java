@@ -1,12 +1,13 @@
 package org.carlspring.strongbox.storage.repository.remote.heartbeat;
 
+import java.util.Objects;
+
+import javax.annotation.Nonnull;
+
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepository;
 import org.carlspring.strongbox.storage.repository.remote.heartbeat.monitor.RemoteRepositoryHeartbeatMonitorStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.annotation.Nonnull;
-import java.util.Objects;
 
 /**
  * @author Przemyslaw Fusik

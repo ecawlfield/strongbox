@@ -1,17 +1,18 @@
 package org.carlspring.strongbox.storage.indexing;
 
-import org.apache.maven.index.context.IndexCreator;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.storage.indexing.local.ArtifactEntryJarFileContentsIndexCreator;
 import org.carlspring.strongbox.storage.indexing.local.ArtifactEntryMinimalArtifactInfoIndexCreator;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.yaml.configuration.repository.MavenRepositoryConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.maven.index.context.IndexCreator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Przemyslaw Fusik

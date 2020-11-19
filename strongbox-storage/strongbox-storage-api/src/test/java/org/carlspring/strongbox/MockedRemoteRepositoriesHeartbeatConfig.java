@@ -1,5 +1,9 @@
 package org.carlspring.strongbox;
 
+import static org.mockito.ArgumentMatchers.any;
+
+import javax.inject.Named;
+
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepository;
 import org.carlspring.strongbox.storage.repository.remote.heartbeat.RemoteRepositoriesHeartbeatMonitorInitiator;
 import org.carlspring.strongbox.storage.repository.remote.heartbeat.RemoteRepositoryAlivenessService;
@@ -14,10 +18,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.event.EventListener;
 import org.springframework.test.context.event.AfterTestExecutionEvent;
-
-import javax.inject.Named;
-
-import static org.mockito.ArgumentMatchers.any;
 
 /**
  * @author Przemyslaw Fusik

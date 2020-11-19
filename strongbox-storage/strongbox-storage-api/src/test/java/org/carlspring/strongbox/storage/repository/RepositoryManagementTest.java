@@ -1,6 +1,5 @@
 package org.carlspring.strongbox.storage.repository;
 
-import org.apache.commons.codec.digest.MessageDigestAlgorithms;
 import org.carlspring.strongbox.StorageApiTestConfig;
 import org.carlspring.strongbox.artifact.generator.RawArtifactGenerator;
 import org.carlspring.strongbox.booters.PropertiesBooter;
@@ -14,6 +13,15 @@ import org.carlspring.strongbox.testing.repository.RawRepository;
 import org.carlspring.strongbox.testing.storage.repository.RepositoryManagementTestExecutionListener;
 import org.carlspring.strongbox.testing.storage.repository.TestRepository;
 import org.carlspring.strongbox.testing.storage.repository.TestRepositoryManagementApplicationContext;
+
+import javax.inject.Inject;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.apache.commons.codec.digest.MessageDigestAlgorithms;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -23,14 +31,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
-
-import javax.inject.Inject;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest

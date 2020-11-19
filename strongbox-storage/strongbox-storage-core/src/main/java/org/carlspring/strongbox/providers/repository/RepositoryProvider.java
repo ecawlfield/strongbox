@@ -3,7 +3,6 @@ package org.carlspring.strongbox.providers.repository;
 import org.carlspring.strongbox.data.criteria.Paginator;
 import org.carlspring.strongbox.data.criteria.Predicate;
 import org.carlspring.strongbox.storage.repository.RepositoryDto;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +10,8 @@ import java.io.OutputStream;
 import java.nio.file.Path;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * This interface provide functionality to operate with artifact Paths.

@@ -1,6 +1,7 @@
 package org.carlspring.strongbox.cron.jobs;
 
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

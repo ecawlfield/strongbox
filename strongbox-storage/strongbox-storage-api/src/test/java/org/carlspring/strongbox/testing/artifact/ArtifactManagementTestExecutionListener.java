@@ -1,5 +1,21 @@
 package org.carlspring.strongbox.testing.artifact;
 
+import static org.carlspring.strongbox.testing.artifact.TestArtifactContext.id;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+import java.lang.reflect.Proxy;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.carlspring.strongbox.io.ProxyPathInvocationHandler;
 import org.carlspring.strongbox.testing.storage.repository.TestRepositoryManagementContext;
 import org.carlspring.strongbox.testing.storage.repository.TestRepositoryManagementContextSupport;
@@ -8,14 +24,6 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;
 import org.springframework.core.annotation.AnnotatedElementUtils;
-
-import java.lang.reflect.*;
-import java.nio.file.Path;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static org.carlspring.strongbox.testing.artifact.TestArtifactContext.id;
 
 /**
  * @author sbespalov

@@ -2,10 +2,11 @@ package org.carlspring.strongbox.storage.repository;
 
 import org.carlspring.strongbox.providers.layout.Maven2LayoutProvider;
 import org.carlspring.strongbox.repository.MavenRepositoryFeatures;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.util.LinkedHashSet;
+
+import org.springframework.stereotype.Component;
 
 /**
  * @author carlspring

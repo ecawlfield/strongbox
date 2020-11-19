@@ -1,10 +1,10 @@
 package org.carlspring.strongbox.cron.domain;
 
-import com.fasterxml.jackson.annotation.JsonRootName;
-
 import java.io.Serializable;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 /**
  * @author Przemyslaw Fusik
