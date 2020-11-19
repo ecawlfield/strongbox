@@ -4,7 +4,6 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Parser;
-import org.carlspring.strongbox.data.criteria.QueryParser;
 import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.nuget.filter.NugetODataFilterParser.FilterContext;
 

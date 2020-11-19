@@ -13,7 +13,6 @@ import org.carlspring.strongbox.cron.services.support.CronTaskConfigurationSearc
 import javax.inject.Inject;
 
 import java.io.IOException;
-import java.lang.reflect.UndeclaredThrowableException;
 import java.util.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;

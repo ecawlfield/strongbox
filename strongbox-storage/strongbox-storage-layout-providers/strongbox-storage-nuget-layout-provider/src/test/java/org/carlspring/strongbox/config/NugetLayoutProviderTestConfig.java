@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
-import static org.mockito.Matchers.any;
+import static org.mockito.ArgumentMatchers.any;
 
 /**
  * @author Martin Todorov

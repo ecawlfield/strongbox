@@ -21,7 +21,6 @@ import java.util.EnumSet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import static java.text.MessageFormat.format;
 
 /**
  * Represents .net framework of a nuspec field. 

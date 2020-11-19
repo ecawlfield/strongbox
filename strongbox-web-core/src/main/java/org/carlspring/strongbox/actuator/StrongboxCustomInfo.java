@@ -1,7 +1,6 @@
 package org.carlspring.strongbox.actuator;
 
 import org.carlspring.strongbox.booters.PropertiesBooter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.info.Info;
 import org.springframework.boot.actuate.info.InfoContributor;
 import org.springframework.stereotype.Component;

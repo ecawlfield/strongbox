@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import static org.carlspring.strongbox.config.Maven2LayoutProviderConfig.FILE_SYSTEM_ALIAS;
-import static org.carlspring.strongbox.config.Maven2LayoutProviderConfig.FILE_SYSTEM_PROVIDER_ALIAS;
 
 /**
  * @author Kate Novik

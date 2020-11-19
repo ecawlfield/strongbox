@@ -6,7 +6,6 @@ import org.carlspring.strongbox.storage.validation.artifact.ArtifactCoordinatesV
 import org.carlspring.strongbox.storage.validation.artifact.version.VersionValidationException;
 
 import javax.annotation.PostConstruct;
-import javax.inject.Inject;
 import java.util.function.BiPredicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -2,8 +2,6 @@ package org.carlspring.strongbox.security.vote;
 
 import java.util.Arrays;
 
-import javax.inject.Inject;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.access.vote.AffirmativeBased;

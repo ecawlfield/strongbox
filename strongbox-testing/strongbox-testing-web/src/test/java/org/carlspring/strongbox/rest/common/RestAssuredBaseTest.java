@@ -3,7 +3,6 @@ package org.carlspring.strongbox.rest.common;
 import org.carlspring.strongbox.rest.client.RestAssuredArtifactClient;
 
 import javax.inject.Inject;
-import java.io.File;
 import java.nio.charset.Charset;
 import java.util.Locale;
 

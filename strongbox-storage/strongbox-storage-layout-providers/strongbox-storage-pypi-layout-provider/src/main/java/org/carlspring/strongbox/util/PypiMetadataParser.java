@@ -1,6 +1,5 @@
 package org.carlspring.strongbox.util;
 
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.carlspring.strongbox.domain.PypiPackageInfo;
 
 import org.carlspring.strongbox.util.annotations.PypiMetadataKey;

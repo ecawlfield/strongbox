@@ -15,7 +15,6 @@ import org.carlspring.strongbox.users.security.SecurityTokenProvider;
 import org.carlspring.strongbox.users.service.UserService;
 import org.carlspring.strongbox.users.service.impl.EncodedPasswordUser;
 import org.carlspring.strongbox.users.service.impl.OrientDbUserService;
-import org.carlspring.strongbox.users.service.impl.OrientDbUserService.OrientDb;
 import org.carlspring.strongbox.users.service.impl.YamlUserService.Yaml;
 import org.carlspring.strongbox.users.userdetails.SpringSecurityUser;
 import org.jose4j.lang.JoseException;

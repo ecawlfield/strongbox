@@ -20,7 +20,6 @@ package org.carlspring.strongbox.storage.metadata.nuget;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
-import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import org.carlspring.strongbox.artifact.coordinates.versioning.SemanticVersion;
 

@@ -1,7 +1,6 @@
 package org.carlspring.strongbox.authorization.service.impl;
 
 import java.io.IOException;
-import java.lang.reflect.UndeclaredThrowableException;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.locks.Lock;

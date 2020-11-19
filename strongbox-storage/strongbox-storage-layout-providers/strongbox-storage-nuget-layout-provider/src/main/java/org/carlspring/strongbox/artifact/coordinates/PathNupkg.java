@@ -13,8 +13,6 @@ import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.util.*;
 
-import javax.xml.bind.DatatypeConverter;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;

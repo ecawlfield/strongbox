@@ -2,7 +2,6 @@ package org.carlspring.strongbox.storage;
 
 import org.carlspring.strongbox.json.MapValuesJsonSerializer;
 import org.carlspring.strongbox.storage.repository.RepositoryData;
-import org.carlspring.strongbox.storage.repository.RepositoryDto;
 import org.carlspring.strongbox.storage.repository.Repository;
 
 import javax.annotation.concurrent.Immutable;

@@ -13,7 +13,6 @@ import org.carlspring.strongbox.event.RepositoryBasedEvent;
 import org.carlspring.strongbox.event.repository.RepositoryEvent;
 import org.carlspring.strongbox.event.repository.RepositoryEventListenerRegistry;
 import org.carlspring.strongbox.event.repository.RepositoryEventTypeEnum;
-import org.carlspring.strongbox.providers.ProviderImplementationException;
 import org.carlspring.strongbox.providers.io.RepositoryFiles;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.providers.io.RepositoryPathResolver;

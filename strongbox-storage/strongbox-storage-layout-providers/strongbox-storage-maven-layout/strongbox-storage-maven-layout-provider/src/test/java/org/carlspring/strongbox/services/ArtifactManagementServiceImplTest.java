@@ -3,7 +3,6 @@ package org.carlspring.strongbox.services;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.carlspring.strongbox.artifact.ArtifactTag;
-import org.carlspring.strongbox.artifact.MavenArtifact;
 import org.carlspring.strongbox.artifact.MavenArtifactUtils;
 import org.carlspring.strongbox.config.Maven2LayoutProviderTestConfig;
 import org.carlspring.strongbox.domain.ArtifactEntry;
@@ -41,7 +40,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import org.apache.commons.io.FilenameUtils;
 import org.apache.maven.artifact.Artifact;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

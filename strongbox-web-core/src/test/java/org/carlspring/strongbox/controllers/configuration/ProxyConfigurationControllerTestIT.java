@@ -7,7 +7,6 @@ import org.carlspring.strongbox.rest.common.RestAssuredBaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
@@ -18,7 +17,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.carlspring.strongbox.controllers.configuration.ProxyConfigurationController.*;
 import static org.hamcrest.Matchers.containsString;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Pablo Tirado

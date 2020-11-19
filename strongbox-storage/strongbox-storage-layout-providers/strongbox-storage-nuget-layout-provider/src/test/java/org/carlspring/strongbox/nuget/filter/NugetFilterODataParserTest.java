@@ -1,12 +1,10 @@
 package org.carlspring.strongbox.nuget.filter;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.parallel.ExecutionMode.CONCURRENT;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
@@ -15,7 +13,6 @@ import javax.transaction.Transactional;
 
 import org.carlspring.strongbox.config.NugetLayoutProviderTestConfig;
 import org.carlspring.strongbox.data.criteria.Expression.ExpOperator;
-import org.carlspring.strongbox.data.criteria.QueryParserException;
 import org.carlspring.strongbox.data.criteria.OQueryTemplate;
 import org.carlspring.strongbox.data.criteria.Predicate;
 import org.carlspring.strongbox.data.criteria.QueryTemplate;
