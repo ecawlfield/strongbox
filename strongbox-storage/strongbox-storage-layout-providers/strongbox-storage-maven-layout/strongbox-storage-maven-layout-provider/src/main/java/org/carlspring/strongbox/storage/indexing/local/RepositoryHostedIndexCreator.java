@@ -1,5 +1,6 @@
 package org.carlspring.strongbox.storage.indexing.local;
 
+import org.apache.maven.index.ArtifactContext;
 import org.carlspring.strongbox.artifact.coordinates.MavenArtifactCoordinates;
 import org.carlspring.strongbox.data.service.support.search.PagingCriteria;
 import org.carlspring.strongbox.domain.ArtifactEntry;
@@ -7,19 +8,17 @@ import org.carlspring.strongbox.domain.RepositoryArtifactIdGroupEntry;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.services.RepositoryArtifactIdGroupService;
 import org.carlspring.strongbox.storage.indexing.*;
-import org.carlspring.strongbox.storage.indexing.RepositoryIndexDirectoryPathResolver.RepositoryIndexDirectoryPathResolverQualifier;
 import org.carlspring.strongbox.storage.indexing.RepositoryIndexCreator.RepositoryIndexCreatorQualifier;
+import org.carlspring.strongbox.storage.indexing.RepositoryIndexDirectoryPathResolver.RepositoryIndexDirectoryPathResolverQualifier;
 import org.carlspring.strongbox.storage.indexing.RepositoryIndexingContextFactory.RepositoryIndexingContextFactoryQualifier;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.RepositoryTypeEnum;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.*;
-
-import org.apache.maven.index.ArtifactContext;
-import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

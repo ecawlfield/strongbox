@@ -1,5 +1,8 @@
 package org.carlspring.strongbox.artifact.coordinates;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.maven.artifact.Artifact;
+import org.apache.maven.artifact.versioning.ComparableVersion;
 import org.carlspring.strongbox.artifact.MavenArtifact;
 import org.carlspring.strongbox.artifact.MavenArtifactUtils;
 import org.carlspring.strongbox.artifact.MavenRepositoryArtifact;
@@ -10,10 +13,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Map;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.maven.artifact.Artifact;
-import org.apache.maven.artifact.versioning.ComparableVersion;
 
 /**
  * @author carlspring

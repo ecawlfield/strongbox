@@ -1,15 +1,15 @@
 package org.carlspring.strongbox.testing.storage.repository;
 
-import java.lang.annotation.Annotation;
-import java.util.Collection;
-import java.util.Map;
-
 import org.carlspring.strongbox.testing.artifact.TestArtifact;
 import org.carlspring.strongbox.testing.artifact.TestArtifactContext;
 import org.carlspring.strongbox.testing.storage.repository.TestRepository.Group;
 import org.carlspring.strongbox.testing.storage.repository.TestRepository.Remote;
 import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.extension.ParameterContext;
+
+import java.lang.annotation.Annotation;
+import java.util.Collection;
+import java.util.Map;
 
 /**
  * @author sbespalov

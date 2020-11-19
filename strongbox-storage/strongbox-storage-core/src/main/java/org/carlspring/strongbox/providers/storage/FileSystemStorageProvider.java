@@ -1,15 +1,14 @@
 package org.carlspring.strongbox.providers.storage;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.spi.FileSystemProvider;
 import java.util.List;
-
-import javax.annotation.PostConstruct;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * @author carlspring

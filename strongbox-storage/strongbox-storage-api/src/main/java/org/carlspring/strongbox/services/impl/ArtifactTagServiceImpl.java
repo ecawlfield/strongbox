@@ -1,8 +1,6 @@
 package org.carlspring.strongbox.services.impl;
 
-import java.util.HashMap;
-import java.util.List;
-
+import com.orientechnologies.orient.core.sql.query.OSQLSynchQuery;
 import org.carlspring.strongbox.artifact.ArtifactTag;
 import org.carlspring.strongbox.data.CacheName;
 import org.carlspring.strongbox.data.service.CommonCrudService;
@@ -12,7 +10,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.orientechnologies.orient.core.sql.query.OSQLSynchQuery;
+import java.util.HashMap;
+import java.util.List;
 
 @Service
 @Transactional

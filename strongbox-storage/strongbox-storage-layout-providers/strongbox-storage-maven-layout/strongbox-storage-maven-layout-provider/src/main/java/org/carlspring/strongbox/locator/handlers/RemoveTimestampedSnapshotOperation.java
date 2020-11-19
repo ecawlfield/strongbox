@@ -5,6 +5,9 @@ import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.storage.metadata.MavenSnapshotManager;
 import org.carlspring.strongbox.storage.metadata.VersionCollectionRequest;
 import org.carlspring.strongbox.storage.metadata.VersionCollector;
+import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,10 +15,6 @@ import java.nio.file.Path;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Stream;
-
-import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Kate Novik.

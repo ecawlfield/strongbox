@@ -3,15 +3,15 @@ package org.carlspring.strongbox.cron.jobs;
 import org.carlspring.strongbox.cron.context.CronTaskTest;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.services.JobManager;
-
-import javax.inject.Inject;
-import java.util.UUID;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+
+import javax.inject.Inject;
+import java.util.UUID;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

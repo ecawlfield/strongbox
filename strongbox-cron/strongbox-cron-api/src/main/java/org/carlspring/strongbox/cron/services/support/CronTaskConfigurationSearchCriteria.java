@@ -1,9 +1,9 @@
 package org.carlspring.strongbox.cron.services.support;
 
+import org.springframework.util.CollectionUtils;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import org.springframework.util.CollectionUtils;
 
 /**
  * @author Przemyslaw Fusik

@@ -1,9 +1,5 @@
 package org.carlspring.strongbox.providers.repository.proxied;
 
-import java.io.Closeable;
-import java.io.FilterInputStream;
-import java.io.IOException;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.time.StopWatch;
 import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
@@ -12,6 +8,10 @@ import org.carlspring.strongbox.client.RestArtifactResolver;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.Closeable;
+import java.io.FilterInputStream;
+import java.io.IOException;
 
 /**
  * @author sbespalov

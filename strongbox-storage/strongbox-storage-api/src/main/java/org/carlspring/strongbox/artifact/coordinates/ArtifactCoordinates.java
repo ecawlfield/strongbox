@@ -1,10 +1,9 @@
 package org.carlspring.strongbox.artifact.coordinates;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.net.URI;
 import java.util.Map;
-
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author carlspring

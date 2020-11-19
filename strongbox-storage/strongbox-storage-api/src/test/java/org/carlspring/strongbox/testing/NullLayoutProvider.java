@@ -1,19 +1,18 @@
 package org.carlspring.strongbox.testing;
 
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import javax.inject.Inject;
-
 import org.apache.commons.codec.digest.MessageDigestAlgorithms;
 import org.carlspring.strongbox.artifact.coordinates.RawArtifactCoordinates;
 import org.carlspring.strongbox.providers.io.RepositoryFiles;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.providers.layout.AbstractLayoutProvider;
 import org.carlspring.strongbox.repository.RepositoryManagementStrategy;
+
+import javax.inject.Inject;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class NullLayoutProvider extends AbstractLayoutProvider<RawArtifactCoordinates>
 {

@@ -6,17 +6,15 @@ import org.carlspring.strongbox.cron.services.CronJobSchedulerService;
 import org.carlspring.strongbox.cron.services.CronTaskConfigurationService;
 import org.carlspring.strongbox.cron.services.CronTaskDataService;
 import org.carlspring.strongbox.event.cron.CronTaskEventListenerRegistry;
-
-import javax.inject.Inject;
-
-import java.io.IOException;
-import java.util.UUID;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.stereotype.Service;
+
+import javax.inject.Inject;
+import java.io.IOException;
+import java.util.UUID;
 
 /**
  * @author Pablo Tirado

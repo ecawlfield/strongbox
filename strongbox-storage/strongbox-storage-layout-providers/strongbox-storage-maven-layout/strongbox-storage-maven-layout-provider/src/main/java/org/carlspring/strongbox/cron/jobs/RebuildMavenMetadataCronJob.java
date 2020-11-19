@@ -1,5 +1,6 @@
 package org.carlspring.strongbox.cron.jobs;
 
+import com.google.common.collect.ImmutableSet;
 import org.carlspring.strongbox.configuration.ConfigurationManager;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.jobs.fields.*;
@@ -7,15 +8,13 @@ import org.carlspring.strongbox.cron.services.JobManager;
 import org.carlspring.strongbox.services.ArtifactMetadataService;
 import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.Repository;
+import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import java.util.Set;
-
-import com.google.common.collect.ImmutableSet;
-import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 /**
  * @author Kate Novik

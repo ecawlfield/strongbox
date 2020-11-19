@@ -5,13 +5,8 @@ import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
 import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.event.artifact.ArtifactEventListenerRegistry;
 import org.carlspring.strongbox.event.repository.RepositoryEventListenerRegistry;
-import org.carlspring.strongbox.io.ByteRangeInputStream;
-import org.carlspring.strongbox.io.LayoutInputStream;
-import org.carlspring.strongbox.io.LayoutOutputStream;
-import org.carlspring.strongbox.io.LazyInputStream;
-import org.carlspring.strongbox.io.LazyOutputStream;
+import org.carlspring.strongbox.io.*;
 import org.carlspring.strongbox.io.LazyOutputStream.OutputStreamSupplier;
-import org.carlspring.strongbox.io.StreamUtils;
 import org.carlspring.strongbox.providers.io.RepositoryFileAttributeType;
 import org.carlspring.strongbox.providers.io.RepositoryFiles;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
@@ -20,6 +15,8 @@ import org.carlspring.strongbox.services.ArtifactEntryService;
 import org.carlspring.strongbox.storage.ArtifactResolutionException;
 import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.Repository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -34,9 +31,6 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * This class decorates {@link StorageFileSystemProvider} with common layout specific

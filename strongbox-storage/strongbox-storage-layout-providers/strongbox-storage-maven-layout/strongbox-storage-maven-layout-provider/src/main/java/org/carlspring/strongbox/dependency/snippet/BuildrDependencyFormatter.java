@@ -4,13 +4,12 @@ import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
 import org.carlspring.strongbox.artifact.coordinates.MavenArtifactCoordinates;
 import org.carlspring.strongbox.providers.layout.AbstractLayoutProvider;
 import org.carlspring.strongbox.providers.layout.Maven2LayoutProvider;
-
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 /**
  * @author Oleksandr Gryniuk

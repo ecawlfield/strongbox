@@ -1,7 +1,6 @@
 import org.carlspring.strongbox.artifact.coordinates.ArtifactLayoutLocator
-import org.jtwig.JtwigTemplate
 import org.jtwig.JtwigModel
-
+import org.jtwig.JtwigTemplate
 
 def layoutMap = ArtifactLayoutLocator.getLayoutEntityMap()
 

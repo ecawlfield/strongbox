@@ -1,30 +1,9 @@
 package org.carlspring.strongbox.providers.repository;
 
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
 import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
 import org.carlspring.strongbox.configuration.ConfigurationUtils;
-import org.carlspring.strongbox.data.criteria.OQueryTemplate;
-import org.carlspring.strongbox.data.criteria.Paginator;
-import org.carlspring.strongbox.data.criteria.Predicate;
-import org.carlspring.strongbox.data.criteria.QueryTemplate;
-import org.carlspring.strongbox.data.criteria.Selector;
+import org.carlspring.strongbox.data.criteria.*;
 import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.providers.io.AbstractRepositoryProvider;
 import org.carlspring.strongbox.providers.io.RepositoryFiles;
@@ -36,10 +15,20 @@ import org.carlspring.strongbox.services.support.ArtifactRoutingRulesChecker;
 import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.util.ThrowingFunction;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author carlspring

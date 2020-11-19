@@ -3,6 +3,7 @@ package org.carlspring.strongbox.cron.jobs;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 
 import java.util.Collections;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

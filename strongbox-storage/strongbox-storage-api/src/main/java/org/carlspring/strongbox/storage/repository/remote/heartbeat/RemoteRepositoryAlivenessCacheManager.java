@@ -1,9 +1,5 @@
 package org.carlspring.strongbox.storage.repository.remote.heartbeat;
 
-import java.util.Objects;
-
-import javax.inject.Inject;
-
 import org.apache.commons.lang3.BooleanUtils;
 import org.carlspring.strongbox.data.CacheName;
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepository;
@@ -13,6 +9,9 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
+import java.util.Objects;
 
 /**
  * @author Przemyslaw Fusik

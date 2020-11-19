@@ -1,9 +1,9 @@
 package org.carlspring.strongbox.yaml;
 
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
+
 import javax.annotation.Nonnull;
 import java.util.Set;
-
-import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 
 /**
  * @author Przemyslaw Fusik

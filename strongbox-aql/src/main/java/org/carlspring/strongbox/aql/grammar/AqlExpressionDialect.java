@@ -1,13 +1,13 @@
 package org.carlspring.strongbox.aql.grammar;
 
-import java.util.Optional;
-
 import org.carlspring.strongbox.artifact.coordinates.ArtifactLayoutLocator;
 import org.carlspring.strongbox.data.criteria.DefaultExpressionDialect;
 import org.carlspring.strongbox.data.criteria.Expression;
 import org.carlspring.strongbox.data.criteria.Expression.ExpOperator;
 import org.carlspring.strongbox.data.criteria.QueryParserException;
 import org.springframework.util.Assert;
+
+import java.util.Optional;
 
 /**
  * This class used to provice AQL specific {@link Expression} parseing.

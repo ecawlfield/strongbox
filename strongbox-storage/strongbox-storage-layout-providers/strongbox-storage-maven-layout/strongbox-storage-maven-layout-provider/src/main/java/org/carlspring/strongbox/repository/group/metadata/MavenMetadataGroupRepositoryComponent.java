@@ -1,19 +1,18 @@
 package org.carlspring.strongbox.repository.group.metadata;
 
+import org.apache.maven.artifact.repository.metadata.Metadata;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.providers.layout.LayoutProvider;
 import org.carlspring.strongbox.repository.group.BaseMavenGroupRepositoryComponent;
 import org.carlspring.strongbox.storage.metadata.MavenMetadataManager;
 import org.carlspring.strongbox.storage.repository.Repository;
+import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
-
-import org.apache.maven.artifact.repository.metadata.Metadata;
-import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
-import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

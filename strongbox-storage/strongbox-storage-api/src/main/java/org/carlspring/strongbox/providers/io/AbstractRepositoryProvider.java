@@ -1,15 +1,5 @@
 package org.carlspring.strongbox.providers.io;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URI;
-import java.nio.file.Path;
-import java.util.Date;
-import java.util.Optional;
-
-import javax.inject.Inject;
-
 import org.apache.commons.io.output.CountingOutputStream;
 import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
 import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
@@ -21,11 +11,7 @@ import org.carlspring.strongbox.data.criteria.Selector;
 import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.domain.RepositoryArtifactIdGroupEntry;
 import org.carlspring.strongbox.event.artifact.ArtifactEventListenerRegistry;
-import org.carlspring.strongbox.io.LayoutOutputStream;
-import org.carlspring.strongbox.io.RepositoryStreamCallback;
-import org.carlspring.strongbox.io.RepositoryStreamReadContext;
-import org.carlspring.strongbox.io.RepositoryStreamWriteContext;
-import org.carlspring.strongbox.io.StreamUtils;
+import org.carlspring.strongbox.io.*;
 import org.carlspring.strongbox.providers.io.RepositoryStreamSupport.RepositoryInputStream;
 import org.carlspring.strongbox.providers.io.RepositoryStreamSupport.RepositoryOutputStream;
 import org.carlspring.strongbox.providers.layout.LayoutProviderRegistry;
@@ -39,6 +25,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.util.Assert;
+
+import javax.inject.Inject;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URI;
+import java.nio.file.Path;
+import java.util.Date;
+import java.util.Optional;
 
 /**
  * @author carlspring

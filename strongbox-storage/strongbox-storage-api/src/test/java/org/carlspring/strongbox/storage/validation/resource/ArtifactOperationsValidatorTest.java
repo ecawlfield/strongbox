@@ -1,14 +1,5 @@
 package org.carlspring.strongbox.storage.validation.resource;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
-import javax.inject.Inject;
-
 import org.carlspring.commons.io.RandomInputStream;
 import org.carlspring.strongbox.StorageApiTestConfig;
 import org.carlspring.strongbox.data.CacheManagerTestExecutionListener;
@@ -17,13 +8,20 @@ import org.carlspring.strongbox.storage.ArtifactResolutionException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
+
+import javax.inject.Inject;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;

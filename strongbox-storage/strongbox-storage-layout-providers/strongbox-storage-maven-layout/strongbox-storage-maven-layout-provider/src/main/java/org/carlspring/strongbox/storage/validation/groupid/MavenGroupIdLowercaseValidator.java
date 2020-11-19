@@ -9,15 +9,14 @@ import org.carlspring.strongbox.storage.validation.MavenArtifactCoordinatesValid
 import org.carlspring.strongbox.storage.validation.artifact.ArtifactCoordinatesValidationException;
 import org.carlspring.strongbox.storage.validation.artifact.ArtifactCoordinatesValidatorRegistry;
 import org.carlspring.strongbox.storage.validation.artifact.LowercaseValidationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.file.Files;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * Created by dinesh on 12/6/17.

@@ -1,9 +1,9 @@
 package org.carlspring.strongbox.configuration;
 
-import java.io.Serializable;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
 
 /**
  * @author Steve Todorov

@@ -1,5 +1,8 @@
 package org.carlspring.strongbox.providers.layout;
 
+import org.apache.commons.io.FilenameUtils;
+import org.apache.maven.artifact.ArtifactUtils;
+import org.apache.maven.artifact.repository.metadata.Metadata;
 import org.carlspring.strongbox.artifact.MavenArtifactUtils;
 import org.carlspring.strongbox.providers.io.*;
 import org.carlspring.strongbox.providers.search.SearchException;
@@ -12,6 +15,9 @@ import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.search.SearchRequest;
 import org.carlspring.strongbox.storage.search.SearchResult;
 import org.carlspring.strongbox.storage.search.SearchResults;
+import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -22,13 +28,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
-
-import org.apache.commons.io.FilenameUtils;
-import org.apache.maven.artifact.ArtifactUtils;
-import org.apache.maven.artifact.repository.metadata.Metadata;
-import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author sbespalov

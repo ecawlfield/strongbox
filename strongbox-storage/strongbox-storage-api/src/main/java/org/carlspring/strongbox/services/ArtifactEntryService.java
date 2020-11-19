@@ -1,10 +1,5 @@
 package org.carlspring.strongbox.services;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.carlspring.strongbox.artifact.ArtifactTag;
 import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
 import org.carlspring.strongbox.data.service.CrudService;
@@ -13,6 +8,11 @@ import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.services.support.ArtifactEntrySearchCriteria;
 import org.javatuples.Pair;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * CRUD service for managing {@link ArtifactEntry} entities.

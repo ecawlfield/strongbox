@@ -1,13 +1,13 @@
 package org.carlspring.strongbox.config;
 
-import java.nio.file.Paths;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
+
+import java.nio.file.Paths;
 
 /**
  * Configures a {@link PropertiesPathResolver} under the name "propertiesPathResolver" - it can then be used in SpEL

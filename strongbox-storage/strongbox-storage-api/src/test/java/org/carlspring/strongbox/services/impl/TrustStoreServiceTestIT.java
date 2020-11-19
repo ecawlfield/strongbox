@@ -5,11 +5,6 @@ import org.carlspring.strongbox.data.CacheManagerTestExecutionListener;
 import org.carlspring.strongbox.resource.ConfigurationResourceResolver;
 import org.carlspring.strongbox.security.certificates.KeyStoreManager;
 import org.carlspring.strongbox.services.TrustStoreService;
-
-import javax.inject.Inject;
-import java.net.InetAddress;
-import java.nio.file.Paths;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +12,11 @@ import org.springframework.core.io.Resource;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
+
+import javax.inject.Inject;
+import java.net.InetAddress;
+import java.nio.file.Paths;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

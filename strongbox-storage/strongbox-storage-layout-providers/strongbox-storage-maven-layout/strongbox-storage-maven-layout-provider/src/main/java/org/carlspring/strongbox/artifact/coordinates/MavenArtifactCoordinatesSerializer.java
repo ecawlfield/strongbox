@@ -1,7 +1,6 @@
 package org.carlspring.strongbox.artifact.coordinates;
 
 import org.carlspring.strongbox.data.domain.EntitySerializer;
-
 import org.springframework.stereotype.Component;
 
 @Component

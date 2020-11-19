@@ -1,11 +1,10 @@
 package org.carlspring.strongbox.yaml.configuration.repository;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import org.carlspring.strongbox.providers.layout.Maven2LayoutProvider;
+import org.carlspring.strongbox.storage.metadata.maven.MetadataExpirationStrategyType;
 import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfiguration;
 import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfigurationDto;
-import org.carlspring.strongbox.storage.metadata.maven.MetadataExpirationStrategyType;
-
-import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * @author carlspring

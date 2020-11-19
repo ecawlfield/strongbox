@@ -1,16 +1,16 @@
 package org.carlspring.strongbox.testing.artifact;
 
+import org.apache.commons.io.IOUtils;
 import org.carlspring.strongbox.providers.io.RepositoryFiles;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.services.ArtifactResolutionService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.io.InputStream;
 import java.util.Arrays;
 
-import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

@@ -4,14 +4,13 @@ import org.carlspring.strongbox.MockedRemoteRepositoriesHeartbeatConfig;
 import org.carlspring.strongbox.config.*;
 import org.carlspring.strongbox.cron.config.CronTasksConfig;
 import org.carlspring.strongbox.data.CacheManagerTestExecutionListener;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestExecutionListeners;
 
 /**
  * @author Alex Oreshkevich

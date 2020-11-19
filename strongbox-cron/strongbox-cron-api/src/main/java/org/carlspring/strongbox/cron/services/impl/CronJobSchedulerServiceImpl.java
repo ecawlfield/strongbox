@@ -4,16 +4,15 @@ import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.domain.GroovyScriptNamesDto;
 import org.carlspring.strongbox.cron.jobs.GroovyCronJob;
 import org.carlspring.strongbox.cron.services.CronJobSchedulerService;
-
-import javax.inject.Inject;
-import java.util.Set;
-import java.util.UUID;
-
 import org.quartz.*;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import javax.inject.Inject;
+import java.util.Set;
+import java.util.UUID;
 
 /**
  * @author Yougeshwar

@@ -1,11 +1,10 @@
 package org.carlspring.strongbox.storage.routing;
 
-import java.io.Serializable;
-
-import org.carlspring.strongbox.configuration.ConfigurationUtils;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.carlspring.strongbox.configuration.ConfigurationUtils;
+
+import java.io.Serializable;
 
 /**
  * @author Przemyslaw Fusik

@@ -1,5 +1,18 @@
 package org.carlspring.strongbox.providers.repository;
 
+import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
+import org.carlspring.strongbox.data.criteria.*;
+import org.carlspring.strongbox.domain.ArtifactEntry;
+import org.carlspring.strongbox.providers.io.*;
+import org.carlspring.strongbox.storage.Storage;
+import org.carlspring.strongbox.storage.repository.Repository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -7,30 +20,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.List;
-
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
-import org.carlspring.strongbox.artifact.ArtifactNotFoundException;
-import org.carlspring.strongbox.data.criteria.DetachQueryTemplate;
-import org.carlspring.strongbox.data.criteria.OQueryTemplate;
-import org.carlspring.strongbox.data.criteria.Paginator;
-import org.carlspring.strongbox.data.criteria.Predicate;
-import org.carlspring.strongbox.data.criteria.QueryTemplate;
-import org.carlspring.strongbox.data.criteria.Selector;
-import org.carlspring.strongbox.domain.ArtifactEntry;
-import org.carlspring.strongbox.providers.io.AbstractRepositoryProvider;
-import org.carlspring.strongbox.providers.io.RepositoryFiles;
-import org.carlspring.strongbox.providers.io.RepositoryPath;
-import org.carlspring.strongbox.providers.io.RepositoryPathResolver;
-import org.carlspring.strongbox.providers.io.RootRepositoryPath;
-import org.carlspring.strongbox.storage.Storage;
-import org.carlspring.strongbox.storage.repository.Repository;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * @author carlspring

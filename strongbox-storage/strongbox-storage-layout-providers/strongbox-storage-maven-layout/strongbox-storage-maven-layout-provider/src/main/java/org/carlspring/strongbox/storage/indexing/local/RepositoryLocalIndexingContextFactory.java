@@ -5,10 +5,9 @@ import org.carlspring.strongbox.storage.indexing.IndexTypeEnum;
 import org.carlspring.strongbox.storage.indexing.RepositoryIndexDirectoryPathResolver;
 import org.carlspring.strongbox.storage.indexing.RepositoryIndexDirectoryPathResolver.RepositoryIndexDirectoryPathResolverQualifier;
 import org.carlspring.strongbox.storage.indexing.RepositoryIndexingContextFactory.RepositoryIndexingContextFactoryQualifier;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-
-import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

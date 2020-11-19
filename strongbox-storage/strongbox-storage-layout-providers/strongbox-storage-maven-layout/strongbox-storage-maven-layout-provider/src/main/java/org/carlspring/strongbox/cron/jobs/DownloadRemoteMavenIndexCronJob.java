@@ -1,18 +1,18 @@
 package org.carlspring.strongbox.cron.jobs;
 
+import com.google.common.collect.ImmutableSet;
 import org.carlspring.strongbox.configuration.ConfigurationManager;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.jobs.fields.*;
 import org.carlspring.strongbox.storage.indexing.RepositoryIndexCreator;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.RepositoryTypeEnum;
+import org.springframework.core.env.Environment;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.util.Set;
 
-import com.google.common.collect.ImmutableSet;
-import org.springframework.core.env.Environment;
 import static org.carlspring.strongbox.storage.indexing.RepositoryIndexCreator.RepositoryIndexCreatorQualifier;
 
 /**

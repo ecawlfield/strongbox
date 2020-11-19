@@ -1,14 +1,14 @@
 package org.carlspring.strongbox.ext.jersey;
 
-import javax.ws.rs.core.MediaType;
-import java.text.ParseException;
-import java.util.Map;
-import java.util.regex.Pattern;
-
 import org.glassfish.jersey.internal.LocalizationMessages;
 import org.glassfish.jersey.message.internal.HttpHeaderReader;
 import org.glassfish.jersey.message.internal.MediaTypeProvider;
 import org.springframework.util.Assert;
+
+import javax.ws.rs.core.MediaType;
+import java.text.ParseException;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * @author Przemyslaw Fusik

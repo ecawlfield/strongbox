@@ -4,12 +4,11 @@ import org.carlspring.strongbox.yaml.YAMLMapperFactory;
 import org.carlspring.strongbox.yaml.YamlFileManager;
 import org.carlspring.strongbox.yaml.repository.CustomRepositoryConfigurationDto;
 import org.carlspring.strongbox.yaml.repository.remote.RemoteRepositoryConfigurationDto;
-
-import javax.inject.Inject;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
 
 /**
  * @author Przemyslaw Fusik

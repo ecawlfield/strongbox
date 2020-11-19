@@ -1,12 +1,11 @@
 package org.carlspring.strongbox.cron.jobs;
 
 import org.carlspring.strongbox.util.ThrowingFunction;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

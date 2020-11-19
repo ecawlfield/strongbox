@@ -1,5 +1,6 @@
 package org.carlspring.strongbox.providers.io;
 
+import org.apache.commons.io.FilenameUtils;
 import org.carlspring.strongbox.domain.ArtifactEntry;
 import org.carlspring.strongbox.io.ProxyPathInvocationHandler;
 import org.carlspring.strongbox.storage.Storage;
@@ -20,8 +21,6 @@ import java.nio.file.WatchService;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import org.apache.commons.io.FilenameUtils;
 
 /**
  * This implementation decorates storage {@link Path} implementation, which can be an "Cloud Path" or common

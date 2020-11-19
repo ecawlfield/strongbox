@@ -1,5 +1,13 @@
 package org.carlspring.strongbox.storage.indexing;
 
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.store.Directory;
+import org.apache.maven.index.artifact.GavCalculator;
+import org.apache.maven.index.context.DocumentFilter;
+import org.apache.maven.index.context.IndexCreator;
+import org.apache.maven.index.context.IndexingContext;
 import org.carlspring.strongbox.storage.repository.Repository;
 
 import java.io.Closeable;
@@ -9,15 +17,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.store.Directory;
-import org.apache.maven.index.artifact.GavCalculator;
-import org.apache.maven.index.context.DocumentFilter;
-import org.apache.maven.index.context.IndexCreator;
-import org.apache.maven.index.context.IndexingContext;
 
 /**
  * @author Przemyslaw Fusik

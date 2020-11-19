@@ -15,6 +15,9 @@ import org.carlspring.strongbox.storage.validation.deployment.RedeploymentValida
 import org.carlspring.strongbox.storage.validation.version.MavenReleaseVersionValidator;
 import org.carlspring.strongbox.storage.validation.version.MavenSnapshotVersionValidator;
 import org.carlspring.strongbox.yaml.configuration.repository.MavenRepositoryConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -23,10 +26,6 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * @author carlspring

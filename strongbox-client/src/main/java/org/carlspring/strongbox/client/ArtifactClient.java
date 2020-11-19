@@ -1,5 +1,11 @@
 package org.carlspring.strongbox.client;
 
+import org.apache.http.HttpStatus;
+import org.glassfish.jersey.apache.connector.ApacheConnectorProvider;
+import org.glassfish.jersey.client.ClientConfig;
+import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
+import org.springframework.security.authentication.AuthenticationServiceException;
+
 import javax.ws.rs.ServerErrorException;
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
@@ -9,11 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
-import org.apache.http.HttpStatus;
-import org.glassfish.jersey.apache.connector.ApacheConnectorProvider;
-import org.glassfish.jersey.client.ClientConfig;
-import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
-import org.springframework.security.authentication.AuthenticationServiceException;
 import static org.apache.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 

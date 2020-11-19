@@ -1,13 +1,5 @@
 package org.carlspring.strongbox.storage.repository.remote.heartbeat;
 
-import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-
-import javax.inject.Inject;
-
 import org.apache.commons.lang3.ObjectUtils;
 import org.carlspring.strongbox.configuration.ConfigurationManager;
 import org.carlspring.strongbox.log.CronTaskContextAcceptFilter;
@@ -23,6 +15,13 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
+
+import javax.inject.Inject;
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * @author Przemyslaw Fusik

@@ -1,14 +1,13 @@
 package org.carlspring.strongbox.providers.storage;
 
 import org.carlspring.strongbox.providers.AbstractMappedProviderRegistry;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * @author carlspring

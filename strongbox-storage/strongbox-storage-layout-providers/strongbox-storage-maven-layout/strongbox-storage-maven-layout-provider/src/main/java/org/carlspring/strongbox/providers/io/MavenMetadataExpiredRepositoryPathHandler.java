@@ -3,12 +3,11 @@ package org.carlspring.strongbox.providers.io;
 import org.carlspring.strongbox.providers.repository.proxied.ProxyRepositoryArtifactResolver;
 import org.carlspring.strongbox.storage.metadata.maven.ChecksumMetadataExpirationStrategy;
 import org.carlspring.strongbox.storage.metadata.maven.MetadataExpirationStrategy;
-import org.carlspring.strongbox.storage.metadata.maven.RefreshMetadataExpirationStrategy;
 import org.carlspring.strongbox.storage.metadata.maven.MetadataExpirationStrategyType;
-import org.carlspring.strongbox.storage.repository.RepositoryData;
+import org.carlspring.strongbox.storage.metadata.maven.RefreshMetadataExpirationStrategy;
 import org.carlspring.strongbox.storage.repository.Repository;
+import org.carlspring.strongbox.storage.repository.RepositoryData;
 import org.carlspring.strongbox.yaml.configuration.repository.MavenRepositoryConfiguration;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -17,7 +16,7 @@ import javax.inject.Inject;
 import java.io.IOException;
 import java.util.Optional;
 
-import static org.carlspring.strongbox.storage.metadata.maven.MetadataExpirationStrategy.Decision.*;
+import static org.carlspring.strongbox.storage.metadata.maven.MetadataExpirationStrategy.Decision.USABLE;
 
 /**
  * @author Przemyslaw Fusik

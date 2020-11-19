@@ -1,5 +1,6 @@
 package org.carlspring.strongbox.storage.validation.version;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
 import org.carlspring.strongbox.artifact.coordinates.MockedMavenArtifactCoordinates;
 import org.carlspring.strongbox.storage.repository.Repository;
@@ -8,10 +9,9 @@ import org.carlspring.strongbox.storage.repository.RepositoryDto;
 import org.carlspring.strongbox.storage.repository.RepositoryPolicyEnum;
 import org.carlspring.strongbox.storage.validation.artifact.version.GenericSnapshotVersionValidator;
 import org.carlspring.strongbox.storage.validation.artifact.version.VersionValidationException;
-
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.assertj.core.api.Assertions.fail;
 

@@ -1,17 +1,16 @@
 package org.carlspring.strongbox.storage.indexing.local;
 
-import org.carlspring.strongbox.artifact.coordinates.MavenArtifactCoordinates;
-import org.carlspring.strongbox.domain.ArtifactEntry;
-import org.carlspring.strongbox.domain.MavenArtifactEntryUtils;
-
-import java.io.File;
-
 import org.apache.commons.io.FilenameUtils;
 import org.apache.maven.index.ArtifactContext;
 import org.apache.maven.index.ArtifactInfo;
 import org.apache.maven.index.artifact.Gav;
 import org.apache.maven.model.Model;
+import org.carlspring.strongbox.artifact.coordinates.MavenArtifactCoordinates;
+import org.carlspring.strongbox.domain.ArtifactEntry;
+import org.carlspring.strongbox.domain.MavenArtifactEntryUtils;
 import org.codehaus.plexus.util.StringUtils;
+
+import java.io.File;
 
 /**
  * @author Przemyslaw Fusik

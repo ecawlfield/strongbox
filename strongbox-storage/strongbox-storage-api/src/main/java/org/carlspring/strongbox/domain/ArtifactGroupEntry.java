@@ -1,17 +1,16 @@
 package org.carlspring.strongbox.domain;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import org.carlspring.strongbox.artifact.ArtifactGroup;
+import org.carlspring.strongbox.data.domain.GenericEntity;
 
 import javax.annotation.Nonnull;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
-
-import org.carlspring.strongbox.artifact.ArtifactGroup;
-import org.carlspring.strongbox.data.domain.GenericEntity;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Przemyslaw Fusik

@@ -1,15 +1,15 @@
 package org.carlspring.strongbox.json;
 
-import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * @author Przemyslaw Fusik

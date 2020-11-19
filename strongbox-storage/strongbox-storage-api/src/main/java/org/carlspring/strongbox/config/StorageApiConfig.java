@@ -3,15 +3,14 @@ package org.carlspring.strongbox.config;
 import org.carlspring.strongbox.booters.StorageBooter;
 import org.carlspring.strongbox.storage.checksum.ChecksumCacheManager;
 import org.carlspring.strongbox.storage.validation.ArtifactCoordinatesValidator;
-
-import javax.inject.Inject;
-import java.util.LinkedHashSet;
-import java.util.List;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
+
+import javax.inject.Inject;
+import java.util.LinkedHashSet;
+import java.util.List;
 
 @Configuration
 @ComponentScan({ "org.carlspring.strongbox.artifact",

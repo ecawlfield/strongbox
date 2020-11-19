@@ -1,5 +1,8 @@
 package org.carlspring.strongbox.repository.group;
 
+import com.google.common.collect.Lists;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.mutable.MutableBoolean;
 import org.carlspring.strongbox.providers.io.RepositoryFiles;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.providers.io.RepositoryPathResolver;
@@ -10,18 +13,14 @@ import org.carlspring.strongbox.providers.repository.group.GroupRepositorySetCol
 import org.carlspring.strongbox.services.ConfigurationManagementService;
 import org.carlspring.strongbox.services.support.ArtifactRoutingRulesChecker;
 import org.carlspring.strongbox.storage.repository.Repository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.google.common.collect.Lists;
-import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.mutable.MutableBoolean;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Przemyslaw Fusik

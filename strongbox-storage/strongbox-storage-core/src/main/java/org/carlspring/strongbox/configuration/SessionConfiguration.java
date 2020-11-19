@@ -1,10 +1,10 @@
 package org.carlspring.strongbox.configuration;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * @author Przemyslaw Fusik

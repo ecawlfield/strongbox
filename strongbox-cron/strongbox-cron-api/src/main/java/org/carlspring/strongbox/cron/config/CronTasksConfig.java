@@ -1,11 +1,5 @@
 package org.carlspring.strongbox.cron.config;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
-
-import javax.inject.Inject;
-
 import org.carlspring.strongbox.config.DataServiceConfig;
 import org.carlspring.strongbox.config.StorageCoreConfig;
 import org.carlspring.strongbox.cron.services.impl.CronTaskExecutor;
@@ -16,6 +10,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.scheduling.quartz.SpringBeanJobFactory;
+
+import javax.inject.Inject;
+import java.util.concurrent.Executor;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 @Configuration
 @ComponentScan({ "org.carlspring.strongbox.cron",

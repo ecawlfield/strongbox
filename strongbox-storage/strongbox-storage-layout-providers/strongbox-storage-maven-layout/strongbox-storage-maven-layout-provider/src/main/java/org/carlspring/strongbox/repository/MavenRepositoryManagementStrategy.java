@@ -10,12 +10,11 @@ import org.carlspring.strongbox.providers.io.RepositoryPathResolver;
 import org.carlspring.strongbox.storage.Storage;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.yaml.configuration.repository.MavenRepositoryConfiguration;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.file.Files;
-
-import org.springframework.stereotype.Component;
 
 /**
  * @author carlspring

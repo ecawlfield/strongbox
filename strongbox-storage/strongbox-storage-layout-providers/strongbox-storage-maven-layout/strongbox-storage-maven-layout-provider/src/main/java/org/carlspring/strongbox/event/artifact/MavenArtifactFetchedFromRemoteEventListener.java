@@ -1,5 +1,6 @@
 package org.carlspring.strongbox.event.artifact;
 
+import org.apache.maven.artifact.repository.metadata.Metadata;
 import org.carlspring.strongbox.artifact.MavenArtifact;
 import org.carlspring.strongbox.artifact.MavenArtifactUtils;
 import org.carlspring.strongbox.client.RestArtifactResolver;
@@ -15,6 +16,8 @@ import org.carlspring.strongbox.storage.metadata.MetadataHelper;
 import org.carlspring.strongbox.storage.metadata.MetadataType;
 import org.carlspring.strongbox.storage.repository.Repository;
 import org.carlspring.strongbox.storage.repository.remote.RemoteRepository;
+import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.BufferedInputStream;
@@ -23,10 +26,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.locks.Lock;
-
-import org.apache.maven.artifact.repository.metadata.Metadata;
-import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
-import org.springframework.stereotype.Component;
 
 /**
  * @author Przemyslaw Fusik

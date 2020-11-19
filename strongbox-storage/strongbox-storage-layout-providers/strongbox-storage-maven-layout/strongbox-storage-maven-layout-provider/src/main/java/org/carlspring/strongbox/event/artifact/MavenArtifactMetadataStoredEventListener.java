@@ -3,11 +3,10 @@ package org.carlspring.strongbox.event.artifact;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.carlspring.strongbox.providers.layout.Maven2LayoutProvider;
 import org.carlspring.strongbox.storage.repository.Repository;
-
-import javax.inject.Inject;
-
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
 
 /**
  * @author Przemyslaw Fusik

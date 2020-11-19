@@ -1,8 +1,8 @@
 package org.carlspring.strongbox.storage;
 
-import java.util.Map;
-
 import org.carlspring.strongbox.storage.repository.Repository;
+
+import java.util.Map;
 
 public interface Storage
 {

@@ -1,13 +1,12 @@
 package org.carlspring.strongbox.dependency.snippet;
 
 import org.carlspring.strongbox.providers.AbstractMappedProviderRegistryWithNestedMap;
-
-import javax.annotation.PostConstruct;
-import java.util.TreeMap;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import java.util.TreeMap;
 
 /**
  * @author carlspring

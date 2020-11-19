@@ -3,12 +3,11 @@ package org.carlspring.strongbox.cron.config;
 import org.carlspring.strongbox.cron.domain.CronTasksConfigurationDto;
 import org.carlspring.strongbox.yaml.YAMLMapperFactory;
 import org.carlspring.strongbox.yaml.YamlFileManager;
-
-import javax.inject.Inject;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
 
 /**
  * @author Przemyslaw Fusik

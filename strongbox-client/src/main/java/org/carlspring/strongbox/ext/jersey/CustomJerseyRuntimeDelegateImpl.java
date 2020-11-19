@@ -1,9 +1,9 @@
 package org.carlspring.strongbox.ext.jersey;
 
-import javax.ws.rs.core.Application;
-
 import org.glassfish.jersey.internal.AbstractRuntimeDelegate;
 import org.glassfish.jersey.server.ContainerFactory;
+
+import javax.ws.rs.core.Application;
 
 /**
  * @author Przemyslaw Fusik

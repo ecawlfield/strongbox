@@ -1,10 +1,5 @@
 package org.carlspring.strongbox.storage.indexing.remote;
 
-import java.io.Closeable;
-import java.io.IOException;
-import java.io.InputStream;
-import java.text.MessageFormat;
-
 import com.google.common.io.Closeables;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
@@ -14,6 +9,11 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.maven.index.updater.ResourceFetcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.Closeable;
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.MessageFormat;
 
 /**
  * @author Przemyslaw Fusik

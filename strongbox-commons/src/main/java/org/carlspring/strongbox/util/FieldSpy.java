@@ -1,9 +1,9 @@
 package org.carlspring.strongbox.util;
 
+import org.apache.commons.lang3.reflect.FieldUtils;
+
 import java.util.HashSet;
 import java.util.Set;
-
-import org.apache.commons.lang3.reflect.FieldUtils;
 
 /**
  * @author Przemyslaw Fusik

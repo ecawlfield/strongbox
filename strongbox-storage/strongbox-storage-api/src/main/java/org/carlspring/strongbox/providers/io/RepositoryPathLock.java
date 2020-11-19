@@ -1,23 +1,20 @@
 package org.carlspring.strongbox.providers.io;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URLEncoder;
-import java.util.Optional;
-import java.util.concurrent.locks.ReadWriteLock;
-
-import javax.annotation.Nonnull;
-import javax.inject.Inject;
-
+import ca.thoughtwire.lock.DistributedLockService;
+import com.hazelcast.core.HazelcastInstance;
 import org.carlspring.strongbox.artifact.coordinates.ArtifactCoordinates;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
-import com.hazelcast.core.HazelcastInstance;
-
-import ca.thoughtwire.lock.DistributedLockService;
+import javax.annotation.Nonnull;
+import javax.inject.Inject;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URLEncoder;
+import java.util.Optional;
+import java.util.concurrent.locks.ReadWriteLock;
 
 /**
  * @author Przemyslaw Fusik

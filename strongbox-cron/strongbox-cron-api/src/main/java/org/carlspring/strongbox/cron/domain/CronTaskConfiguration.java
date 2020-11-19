@@ -1,12 +1,12 @@
 package org.carlspring.strongbox.cron.domain;
 
+import com.google.common.collect.ImmutableMap;
+
 import javax.annotation.concurrent.Immutable;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
-
-import com.google.common.collect.ImmutableMap;
 
 /**
  * @author Przemyslaw Fusik

@@ -19,6 +19,8 @@
 
 package org.carlspring.strongbox.artifact.coordinates.versioning;
 
+import org.apache.commons.lang.StringUtils;
+
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -26,8 +28,6 @@ import javax.annotation.concurrent.Immutable;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.lang.StringUtils;
 
 /**
  * Version following semantic defined by <a href="http://semver.org/">Semantic Versioning</a> document.

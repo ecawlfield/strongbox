@@ -1,13 +1,12 @@
 package org.carlspring.strongbox.artifact.archive;
 
+import org.apache.commons.compress.archivers.ArchiveEntry;
+import org.apache.commons.compress.archivers.ArchiveInputStream;
 import org.carlspring.strongbox.providers.io.RepositoryPath;
 
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
-
-import org.apache.commons.compress.archivers.ArchiveEntry;
-import org.apache.commons.compress.archivers.ArchiveInputStream;
 
 /**
  * @author Przemyslaw Fusik

@@ -4,6 +4,8 @@ import org.carlspring.strongbox.resource.ConfigurationResourceResolver;
 import org.carlspring.strongbox.security.certificates.KeyStoreManager;
 import org.carlspring.strongbox.services.TrustStoreService;
 import org.carlspring.strongbox.services.support.TrustStoreCertificateOperationException;
+import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -15,9 +17,6 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
-
-import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Service;
 
 /**
  * @author Przemyslaw Fusik

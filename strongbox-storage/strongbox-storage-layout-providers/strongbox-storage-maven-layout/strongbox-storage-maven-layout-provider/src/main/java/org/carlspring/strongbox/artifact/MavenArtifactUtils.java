@@ -1,17 +1,16 @@
 package org.carlspring.strongbox.artifact;
 
-import org.carlspring.strongbox.providers.io.RepositoryFiles;
-import org.carlspring.strongbox.providers.io.RepositoryPath;
-
-import java.io.IOException;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.index.artifact.Gav;
 import org.apache.maven.index.artifact.M2GavCalculator;
+import org.carlspring.strongbox.providers.io.RepositoryFiles;
+import org.carlspring.strongbox.providers.io.RepositoryPath;
 import org.javatuples.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
 
 /**
  * @author Przemyslaw Fusik

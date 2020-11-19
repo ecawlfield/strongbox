@@ -1,8 +1,7 @@
 package org.carlspring.strongbox.storage.validation.version;
 
-import org.carlspring.strongbox.storage.validation.MavenArtifactCoordinatesValidator;
-
 import org.apache.maven.artifact.ArtifactUtils;
+import org.carlspring.strongbox.storage.validation.MavenArtifactCoordinatesValidator;
 
 /**
  * @author Przemyslaw Fusik

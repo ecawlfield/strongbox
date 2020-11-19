@@ -1,18 +1,9 @@
 package org.carlspring.strongbox.ext.jersey;
 
-import javax.inject.Singleton;
-
-import org.glassfish.jersey.message.internal.CacheControlProvider;
-import org.glassfish.jersey.message.internal.CookieProvider;
-import org.glassfish.jersey.message.internal.DateProvider;
-import org.glassfish.jersey.message.internal.EntityTagProvider;
-import org.glassfish.jersey.message.internal.LinkProvider;
-import org.glassfish.jersey.message.internal.LocaleProvider;
-import org.glassfish.jersey.message.internal.MessagingBinders;
-import org.glassfish.jersey.message.internal.NewCookieProvider;
-import org.glassfish.jersey.message.internal.StringHeaderProvider;
-import org.glassfish.jersey.message.internal.UriProvider;
+import org.glassfish.jersey.message.internal.*;
 import org.glassfish.jersey.spi.HeaderDelegateProvider;
+
+import javax.inject.Singleton;
 
 /**
  * @author Przemyslaw Fusik

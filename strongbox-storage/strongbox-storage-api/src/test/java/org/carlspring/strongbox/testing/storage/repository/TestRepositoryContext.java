@@ -19,6 +19,8 @@ import org.carlspring.strongbox.storage.routing.MutableRoutingRuleRepository;
 import org.carlspring.strongbox.testing.storage.repository.TestRepository.Group;
 import org.carlspring.strongbox.testing.storage.repository.TestRepository.Remote;
 import org.carlspring.strongbox.util.ThrowingSupplier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.PreDestroy;
 import java.io.IOException;
@@ -29,9 +31,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * This class manages the resources used within {@link Repository}.

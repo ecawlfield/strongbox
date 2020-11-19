@@ -1,16 +1,11 @@
 package org.carlspring.strongbox.cron.jobs;
 
+import com.google.common.collect.ImmutableSet;
 import org.carlspring.strongbox.cron.CronJobStatusEnum;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.services.CronTaskConfigurationService;
 import org.carlspring.strongbox.cron.services.JobManager;
 import org.carlspring.strongbox.event.cron.CronTaskEventListenerRegistry;
-
-import javax.inject.Inject;
-import java.util.Set;
-import java.util.UUID;
-
-import com.google.common.collect.ImmutableSet;
 import org.quartz.DisallowConcurrentExecution;
 import org.quartz.InterruptableJob;
 import org.quartz.JobExecutionContext;
@@ -19,6 +14,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.Profiles;
 import org.springframework.scheduling.quartz.QuartzJobBean;
+
+import javax.inject.Inject;
+import java.util.Set;
+import java.util.UUID;
 
 /**
  * @author carlspring

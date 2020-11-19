@@ -2,12 +2,11 @@ package org.carlspring.strongbox.cron.services.impl;
 
 import org.carlspring.strongbox.cron.config.JobExecutionListener;
 import org.carlspring.strongbox.cron.services.JobManager;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-
-import org.springframework.stereotype.Component;
 
 /**
  * @author Kate Novik.

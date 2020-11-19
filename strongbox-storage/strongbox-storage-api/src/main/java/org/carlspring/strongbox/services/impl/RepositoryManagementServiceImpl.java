@@ -1,11 +1,5 @@
 package org.carlspring.strongbox.services.impl;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.util.Map;
-
-import javax.inject.Inject;
-
 import org.carlspring.strongbox.configuration.Configuration;
 import org.carlspring.strongbox.configuration.ConfigurationManager;
 import org.carlspring.strongbox.event.Event;
@@ -29,6 +23,11 @@ import org.carlspring.strongbox.storage.validation.resource.ArtifactOperationsVa
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.Map;
 
 /**
  * @author mtodorov

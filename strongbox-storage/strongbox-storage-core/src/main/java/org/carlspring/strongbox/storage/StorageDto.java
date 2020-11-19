@@ -1,16 +1,15 @@
 package org.carlspring.strongbox.storage;
 
-import java.io.Serializable;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-import org.carlspring.strongbox.storage.repository.RepositoryDto;
-import org.carlspring.strongbox.storage.repository.Repository;
-import org.springframework.util.CollectionUtils;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import org.carlspring.strongbox.storage.repository.Repository;
+import org.carlspring.strongbox.storage.repository.RepositoryDto;
+import org.springframework.util.CollectionUtils;
+
+import java.io.Serializable;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * @author mtodorov

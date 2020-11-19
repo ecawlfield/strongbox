@@ -1,22 +1,22 @@
 package org.carlspring.strongbox.aql;
 
+import com.google.common.collect.ImmutableMap;
 import org.carlspring.strongbox.aql.grammar.AqlQueryParser;
 import org.carlspring.strongbox.data.criteria.OQueryTemplate;
 import org.carlspring.strongbox.data.criteria.Predicate;
 import org.carlspring.strongbox.data.criteria.QueryParserException;
 import org.carlspring.strongbox.data.criteria.Selector;
 import org.carlspring.strongbox.domain.ArtifactEntry;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import com.google.common.collect.ImmutableMap;
 import org.javatuples.Pair;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AqlParserTest

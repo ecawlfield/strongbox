@@ -1,13 +1,12 @@
 package org.carlspring.strongbox.cron.jobs;
 
+import com.google.common.collect.ImmutableSet;
 import org.carlspring.strongbox.cron.domain.CronTaskConfigurationDto;
 import org.carlspring.strongbox.cron.jobs.fields.*;
 import org.carlspring.strongbox.services.RepositoryManagementService;
 
 import javax.inject.Inject;
 import java.util.Set;
-
-import com.google.common.collect.ImmutableSet;
 
 /**
  * @author Kate Novik.
