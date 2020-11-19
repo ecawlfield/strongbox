@@ -788,50 +788,19 @@ public class MavenArtifactControllerTest
         String version1 = "3.1";
         String version2 = "3.2";
 
-        createPluginXmlFile(groupId, artifactId1, version1);
-        File file = createJarFile(artifactId1 + "-" + version1);
-        doReturn(file).when(artifact1).getFile();
-
-        createPluginXmlFile(groupId, artifactId2, version1);
-        file = createJarFile(artifactId2 + "-" + version1);
-        doReturn(file).when(artifact2).getFile();
-
-        createPluginXmlFile(groupId, artifactId1, version2);
-        file = createJarFile(artifactId1 + "-" + version2);
-        doReturn(file).when(artifact3).getFile();
-
-        createPluginXmlFile(groupId, artifactId2, version2);
-        file = createJarFile(artifactId2 + "-" + version2);
-        doReturn(file).when(artifact4).getFile();
+        testHelperCreatePluginXMmlAndJarFiles(groupId, artifactId1, artifact1, version1);
+        testHelperCreatePluginXMmlAndJarFiles(groupId, artifactId2, artifact2, version1);
+        testHelperCreatePluginXMmlAndJarFiles(groupId, artifactId1, artifact3, version2);
+        testHelperCreatePluginXMmlAndJarFiles(groupId, artifactId2, artifact4, version2);
 
         // Artifacts
-        createPluginXmlFile(groupId, artifactId3, version1);
-        file = createJarFile(artifactId3 + "-" + version1);
-        doReturn(file).when(artifact5).getFile();
+        testHelperCreatePluginXMmlAndJarFiles(groupId, artifactId3, artifact5, version1);
+        testHelperCreatePluginXMmlAndJarFiles(groupId, artifactId3, artifact6, version2);
 
-        createPluginXmlFile(groupId, artifactId3, version2);
-        file = createJarFile(artifactId3 + "-" + version2);
-        doReturn(file).when(artifact6).getFile();
-
-        Plugin p1 = new Plugin();
-        p1.setGroupId(artifact1.getGroupId());
-        p1.setArtifactId(artifact1.getArtifactId());
-        p1.setVersion(artifact1.getVersion());
-
-        Plugin p2 = new Plugin();
-        p2.setGroupId(artifact2.getGroupId());
-        p2.setArtifactId(artifact2.getArtifactId());
-        p2.setVersion(artifact2.getVersion());
-
-        Plugin p3 = new Plugin();
-        p3.setGroupId(artifact3.getGroupId());
-        p3.setArtifactId(artifact3.getArtifactId());
-        p3.setVersion(artifact3.getVersion());
-
-        Plugin p4 = new Plugin();
-        p4.setGroupId(artifact4.getGroupId());
-        p4.setArtifactId(artifact4.getArtifactId());
-        p4.setVersion(artifact4.getVersion());
+        Plugin p1 = testHelperPluginSetup(artifact1);
+        Plugin p2 = testHelperPluginSetup(artifact2);
+        Plugin p3 = testHelperPluginSetup(artifact3);
+        Plugin p4 = testHelperPluginSetup(artifact4);
 
         PluginArtifact pluginArtifact1 = new PluginArtifact(p1, artifact1);
         PluginArtifact pluginArtifact2 = new PluginArtifact(p2, artifact2);
@@ -864,38 +833,51 @@ public class MavenArtifactControllerTest
         assertThat(groupLevelMetadata.getPlugins()).hasSize(2);
 
         // Artifact Level metadata
-        metadataPath = "/storages/" + storageId + "/" + repositoryId + "/" + getArtifactLevelMetadataPath(artifact1);
-        Metadata artifactLevelMetadata = defaultMavenArtifactDeployer.retrieveMetadata(metadataPath);
+        Metadata artifactLevelMetadata = testHelperGetArtifactLevelMetadata(storageId, repositoryId, artifact1);
+        testHelperMetadataAssertions(groupId, artifactId1, version2, artifactLevelMetadata);
 
+        artifactLevelMetadata = testHelperGetArtifactLevelMetadata(storageId, repositoryId, artifact2);
+        testHelperMetadataAssertions(groupId, artifactId2, version2, artifactLevelMetadata);
+
+        artifactLevelMetadata = testHelperGetArtifactLevelMetadata(storageId, repositoryId, artifact5);
+        testHelperMetadataAssertions(groupId, artifactId3, version2, artifactLevelMetadata);
+    }
+
+    private Metadata testHelperGetArtifactLevelMetadata(String storageId, String repositoryId, Artifact artifact)
+            throws ArtifactTransportException, IOException, XmlPullParserException {
+        String metadataPath = "/storages/" + storageId + "/" + repositoryId + "/" + getArtifactLevelMetadataPath(artifact);
+        return defaultMavenArtifactDeployer.retrieveMetadata(metadataPath);
+    }
+
+    private void testHelperMetadataAssertions(String groupId,
+                                              String artifactId,
+                                              String version,
+                                              Metadata artifactLevelMetadata) {
         assertThat(artifactLevelMetadata).isNotNull();
         assertThat(artifactLevelMetadata.getGroupId()).isEqualTo(groupId);
-        assertThat(artifactLevelMetadata.getArtifactId()).isEqualTo(artifactId1);
-        assertThat(artifactLevelMetadata.getVersioning().getLatest()).isEqualTo(version2);
-        assertThat(artifactLevelMetadata.getVersioning().getRelease()).isEqualTo(version2);
+        assertThat(artifactLevelMetadata.getArtifactId()).isEqualTo(artifactId);
+        assertThat(artifactLevelMetadata.getVersioning().getLatest()).isEqualTo(version);
+        assertThat(artifactLevelMetadata.getVersioning().getRelease()).isEqualTo(version);
         assertThat(artifactLevelMetadata.getVersioning().getVersions()).hasSize(2);
         assertThat(artifactLevelMetadata.getVersioning().getLastUpdated()).isNotNull();
+    }
 
-        metadataPath = "/storages/" + storageId + "/" + repositoryId + "/" + getArtifactLevelMetadataPath(artifact2);
-        artifactLevelMetadata = defaultMavenArtifactDeployer.retrieveMetadata(metadataPath);
+    private Plugin testHelperPluginSetup(Artifact artifact) {
+        Plugin p1 = new Plugin();
+        p1.setGroupId(artifact.getGroupId());
+        p1.setArtifactId(artifact.getArtifactId());
+        p1.setVersion(artifact.getVersion());
+        return p1;
+    }
 
-        assertThat(artifactLevelMetadata).isNotNull();
-        assertThat(artifactLevelMetadata.getGroupId()).isEqualTo(groupId);
-        assertThat(artifactLevelMetadata.getArtifactId()).isEqualTo(artifactId2);
-        assertThat(artifactLevelMetadata.getVersioning().getLatest()).isEqualTo(version2);
-        assertThat(artifactLevelMetadata.getVersioning().getRelease()).isEqualTo(version2);
-        assertThat(artifactLevelMetadata.getVersioning().getVersions()).hasSize(2);
-        assertThat(artifactLevelMetadata.getVersioning().getLastUpdated()).isNotNull();
-
-        metadataPath = "/storages/" + storageId + "/" + repositoryId + "/" + getArtifactLevelMetadataPath(artifact5);
-        artifactLevelMetadata = defaultMavenArtifactDeployer.retrieveMetadata(metadataPath);
-
-        assertThat(artifactLevelMetadata).isNotNull();
-        assertThat(artifactLevelMetadata.getGroupId()).isEqualTo(groupId);
-        assertThat(artifactLevelMetadata.getArtifactId()).isEqualTo(artifactId3);
-        assertThat(artifactLevelMetadata.getVersioning().getLatest()).isEqualTo(version2);
-        assertThat(artifactLevelMetadata.getVersioning().getRelease()).isEqualTo(version2);
-        assertThat(artifactLevelMetadata.getVersioning().getVersions()).hasSize(2);
-        assertThat(artifactLevelMetadata.getVersioning().getLastUpdated()).isNotNull();
+    private void testHelperCreatePluginXMmlAndJarFiles(String groupId,
+                                                       String artifactId,
+                                                       Artifact artifact,
+                                                       String version)
+            throws Exception {
+        createPluginXmlFile(groupId, artifactId, version);
+        File file = createJarFile(artifactId + "-" + version);
+        doReturn(file).when(artifact).getFile();
     }
 
     @ExtendWith({ RepositoryManagementTestExecutionListener.class,
