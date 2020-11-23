@@ -58,47 +58,18 @@ public class AccessModelFormTest
 
         AccessModelForm developer01AccessModel = new AccessModelForm();
 
-        RepositoryAccessModelForm form = new RepositoryAccessModelForm();
-        form.setStorageId("storage0");
-        form.setRepositoryId("releases");
-        form.setPath("com/carlspring/foo");
-        form.setPrivileges(Privileges.r());
-        form.setWildcard(true);
-        developer01AccessModel.addRepositoryAccess(form);
-
-        form = new RepositoryAccessModelForm();
-        form.setStorageId("storage0");
-        form.setRepositoryId("releases");
-        form.setPath("org/carlspring/foo");
-        form.setPrivileges(Privileges.rw());
-        form.setWildcard(true);
-        developer01AccessModel.addRepositoryAccess(form);
-
-        form = new RepositoryAccessModelForm();
-        form.setStorageId("storage0");
-        form.setRepositoryId("releases");
-        form.setPath("com/apache/foo");
-        form.setPrivileges(Privileges.r());
-        developer01AccessModel.addRepositoryAccess(form);
-
-        form = new RepositoryAccessModelForm();
-        form.setStorageId("storage0");
-        form.setRepositoryId("releases");
-        form.setPath("org/apache/foo");
-        form.setPrivileges(Privileges.rw());
-        developer01AccessModel.addRepositoryAccess(form);
-
-        form = new RepositoryAccessModelForm();
-        form.setStorageId("storage0");
-        form.setRepositoryId("releases");
-        form.setPrivileges(ImmutableSet.of("ARTIFACTS_RESOLVE", "ARTIFACTS_DEPLOY"));
-        developer01AccessModel.addRepositoryAccess(form);
-
-        form = new RepositoryAccessModelForm();
-        form.setStorageId("storage0");
-        form.setRepositoryId("snapshots");
-        form.setPrivileges(ImmutableSet.of("ARTIFACTS_DEPLOY"));
-        developer01AccessModel.addRepositoryAccess(form);
+        formCreationHelper(developer01AccessModel, "releases",
+                "com/carlspring/foo", Privileges.r(), true);
+        formCreationHelper(developer01AccessModel, "releases",
+                "org/carlspring/foo", Privileges.rw(), true);
+        formCreationHelper(developer01AccessModel, "releases",
+                "com/apache/foo", Privileges.r(), false);
+        formCreationHelper(developer01AccessModel, "releases",
+                "org/apache/foo", Privileges.rw(), false);
+        formCreationHelper(developer01AccessModel, "releases",
+                "", ImmutableSet.of("ARTIFACTS_RESOLVE", "ARTIFACTS_DEPLOY"), false);
+        formCreationHelper(developer01AccessModel, "snapshots",
+                "", ImmutableSet.of("ARTIFACTS_DEPLOY"), false);
 
         AccessModelDto userAccessModel = AccessModelFormToUserAccessModelDtoConverter.INSTANCE.convert(
                 developer01AccessModel);
@@ -126,37 +97,7 @@ public class AccessModelFormTest
 
             if ("releases".equals(userRepository.getRepositoryId()))
             {
-                assertThat(pathPrivileges).isNotNull();
-                assertThat(pathPrivileges).hasSize(4);
-
-                for (PathPrivilegesDto pathPrivilege : pathPrivileges)
-                {
-                    assertThat(pathPrivilege.getPath())
-                            .isIn("com/apache/foo",
-                                  "org/apache/foo",
-                                  "com/carlspring/foo",
-                                  "org/carlspring/foo");
-                    if (pathPrivilege.getPath().startsWith("org"))
-                    {
-                        assertThat(pathPrivilege.getPrivileges()).hasSize(5);
-                    }
-                    else
-                    {
-                        assertThat(pathPrivilege.getPrivileges()).hasSize(2);
-                    }
-
-                    if (pathPrivilege.getPath().contains("carlspring"))
-                    {
-                        assertThat(pathPrivilege.isWildcard()).isTrue();
-                    }
-                    else
-                    {
-                        assertThat(pathPrivilege.isWildcard()).isFalse();
-                    }
-                }
-
-                assertThat(repositoryPrivileges).hasSize(2);
-                assertThat(repositoryPrivileges).contains(Privileges.ARTIFACTS_RESOLVE, Privileges.ARTIFACTS_DEPLOY);
+                releasePathPrivilegesCheckHelper(repositoryPrivileges, pathPrivileges);
             }
             if ("snapshots".equals(userRepository.getRepositoryId()))
             {
@@ -165,6 +106,54 @@ public class AccessModelFormTest
                 assertThat(repositoryPrivileges).contains(Privileges.ARTIFACTS_DEPLOY);
             }
         }
+    }
+
+    private void releasePathPrivilegesCheckHelper(Set<Privileges> repositoryPrivileges,
+                                                  Set<PathPrivilegesDto> pathPrivileges)
+    {
+        assertThat(pathPrivileges).isNotNull();
+        assertThat(pathPrivileges).hasSize(4);
+
+        for (PathPrivilegesDto pathPrivilege : pathPrivileges)
+        {
+            assertThat(pathPrivilege.getPath())
+                    .isIn("com/apache/foo",
+                          "org/apache/foo",
+                          "com/carlspring/foo",
+                          "org/carlspring/foo");
+            if (pathPrivilege.getPath().startsWith("org"))
+            {
+                assertThat(pathPrivilege.getPrivileges()).hasSize(5);
+            }
+            else
+            {
+                assertThat(pathPrivilege.getPrivileges()).hasSize(2);
+            }
+
+            if (pathPrivilege.getPath().contains("carlspring"))
+            {
+                assertThat(pathPrivilege.isWildcard()).isTrue();
+            }
+            else
+            {
+                assertThat(pathPrivilege.isWildcard()).isFalse();
+            }
+        }
+
+        assertThat(repositoryPrivileges).hasSize(2);
+        assertThat(repositoryPrivileges).contains(Privileges.ARTIFACTS_RESOLVE, Privileges.ARTIFACTS_DEPLOY);
+    }
+
+    private void formCreationHelper(AccessModelForm model, String repoId,
+                                                         String filepath, Collection<String> privileges, Boolean wc)
+    {
+        RepositoryAccessModelForm form = new RepositoryAccessModelForm();
+        form.setStorageId("storage0");
+        form.setRepositoryId(repoId);
+        form.setPath(filepath);
+        form.setPrivileges(privileges);
+        if (wc) { form.setWildcard(true); }
+        model.addRepositoryAccess(form);
     }
 
     @Test
