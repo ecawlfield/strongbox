@@ -1,5 +1,6 @@
 package org.carlspring.strongbox.validation.cron;
 
+import com.sun.istack.Nullable;
 import org.carlspring.strongbox.cron.jobs.CronJobDefinition;
 import org.carlspring.strongbox.cron.jobs.CronJobsDefinitionsRegistry;
 import org.carlspring.strongbox.cron.jobs.fields.CronJobField;
@@ -59,30 +60,27 @@ public class CronTaskConfigurationFormValidator
             form.isOneTimeExecution() &&
             StringUtils.isNotBlank(form.getCronExpression()))
         {
-            context.buildConstraintViolationWithTemplate(
-                    "Cron expression should not be provided when both immediateExecution and oneTimeExecution are set to true")
-                   .addPropertyNode("cronExpression")
-                   .addConstraintViolation();
+            buildConstraintViolationHelperSimple(context,
+                    "Cron expression should not be provided when both immediateExecution and oneTimeExecution are set to true",
+                    "cronExpression");
             isValid = false;
             cronExpressionIsValid = false;
         }
 
         if (cronExpressionIsValid && StringUtils.isBlank(form.getCronExpression()))
         {
-            context.buildConstraintViolationWithTemplate(
-                    "Cron expression is required")
-                   .addPropertyNode("cronExpression")
-                   .addConstraintViolation();
+            buildConstraintViolationHelperSimple(context,
+                    "Cron expression is required",
+                    "cronExpression");
             isValid = false;
             cronExpressionIsValid = false;
         }
 
         if (cronExpressionIsValid && !CronExpression.isValidExpression(form.getCronExpression()))
         {
-            context.buildConstraintViolationWithTemplate(
-                    "Cron expression is invalid")
-                   .addPropertyNode("cronExpression")
-                   .addConstraintViolation();
+            buildConstraintViolationHelperSimple(context,
+                    "Cron expression is invalid",
+                    "cronExpression");
             isValid = false;
         }
 
@@ -103,71 +101,84 @@ public class CronTaskConfigurationFormValidator
                     break;
                 }
             }
-            if (correspondingFormField == null)
+            if (correspondingFormField == null && definitionField.isRequired())
             {
-                if (definitionField.isRequired())
-                {
-                    context.buildConstraintViolationWithTemplate(
-                            String.format("Required field [%s] not provided", definitionFieldName))
-                           .addPropertyNode("fields")
-                           .addConstraintViolation();
-                    isValid = false;
-                }
+                buildConstraintViolationHelperSimple(context,
+                        String.format("Required field [%s] not provided", definitionFieldName),
+                        "fields");
+                isValid = false;
                 // field is not required and is not provided
                 continue;
             }
 
             String formFieldValue = correspondingFormField.getValue();
-            if (StringUtils.isBlank(formFieldValue) && definitionField.isRequired())
-            {
-                context.buildConstraintViolationWithTemplate(
-                        String.format("Required field value [%s] not provided", definitionFieldName))
-                       .addPropertyNode("fields")
-                       .addPropertyNode("value")
-                       .inIterable().atIndex(correspondingFormFieldIndex)
-                       .addConstraintViolation();
-                isValid = false;
-                continue;
-            }
-
-            String definitionFieldType = definitionField.getType();
-            CronTaskConfigurationFormFieldTypeValidator cronTaskConfigurationFormFieldTypeValidator = cronTaskConfigurationFormFieldTypeValidatorsRegistry.get(
-                    definitionFieldType);
-            if (!cronTaskConfigurationFormFieldTypeValidator.isValid(formFieldValue))
-            {
-                context.buildConstraintViolationWithTemplate(
-                        String.format("Invalid value [%s] type provided. [%s] was expected.", escapeMessageValue(formFieldValue),
-                                      definitionFieldType))
-                       .addPropertyNode("fields")
-                       .addPropertyNode("value")
-                       .inIterable().atIndex(correspondingFormFieldIndex)
-                       .addConstraintViolation();
-                isValid = false;
-                continue;
-            }
-
-            String autocompleteValue = definitionField.getAutocompleteValue();
-            if (autocompleteValue != null)
-            {
-                CronTaskConfigurationFormFieldAutocompleteValidator cronTaskConfigurationFormFieldAutocompleteValidator = cronTaskConfigurationFormFieldAutocompleteValidatorsRegistry.get(
-                        autocompleteValue);
-                if (!cronTaskConfigurationFormFieldAutocompleteValidator.isValid(formFieldValue))
-                {
-                    context.buildConstraintViolationWithTemplate(
-                            String.format("Invalid value [%s] provided. Possible values do not contain this value.",
-                                          escapeMessageValue(formFieldValue)))
-                           .addPropertyNode("fields")
-                           .addPropertyNode("value")
-                           .inIterable().atIndex(correspondingFormFieldIndex)
-                           .addConstraintViolation();
-                    isValid = false;
-                    continue;
-                }
-            }
+            isValid = isValidFormFieldValue(context, definitionField, definitionFieldName,
+                    correspondingFormFieldIndex, formFieldValue) && isValid;
             // TODO SB-1393
         }
 
         return isValid;
+    }
+
+    private boolean isValidFormFieldValue(ConstraintValidatorContext context, CronJobField definitionField,
+                            String definitionFieldName, int correspondingFormFieldIndex,
+                            String formFieldValue)
+    {
+        if (StringUtils.isBlank(formFieldValue) && definitionField.isRequired())
+        {
+            buildConstraintViolationHelperComplex(context,
+                    "Required field value [%s] not provided",
+                    correspondingFormFieldIndex, new Object[] {definitionFieldName});
+            return false;
+        }
+
+        String definitionFieldType = definitionField.getType();
+        CronTaskConfigurationFormFieldTypeValidator cronTaskConfigurationFormFieldTypeValidator
+                = cronTaskConfigurationFormFieldTypeValidatorsRegistry.get(definitionFieldType);
+        if (!cronTaskConfigurationFormFieldTypeValidator.isValid(formFieldValue))
+        {
+            buildConstraintViolationHelperComplex(context,
+                    "Invalid value [%s] type provided. [%s] was expected.",
+                    correspondingFormFieldIndex,
+                    new Object[] {escapeMessageValue(formFieldValue), definitionFieldType});
+            return false;
+        }
+
+        String autocompleteValue = definitionField.getAutocompleteValue();
+        if (autocompleteValue != null)
+        {
+            CronTaskConfigurationFormFieldAutocompleteValidator cronTaskConfigurationFormFieldAutocompleteValidator =
+                    cronTaskConfigurationFormFieldAutocompleteValidatorsRegistry.get(autocompleteValue);
+            if (!cronTaskConfigurationFormFieldAutocompleteValidator.isValid(formFieldValue))
+            {
+                buildConstraintViolationHelperComplex(context,
+                        "Invalid value [%s] provided. Possible values do not contain this value.",
+                        correspondingFormFieldIndex, new Object[] {escapeMessageValue(formFieldValue)});
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void buildConstraintViolationHelperComplex(ConstraintValidatorContext context,
+                                                       String format,
+                                                       int correspondingFormFieldIndex,
+                                                       @Nullable Object[] args) {
+        context.buildConstraintViolationWithTemplate(
+                String.format(format, args))
+                .addPropertyNode("fields")
+                .addPropertyNode("value")
+                .inIterable().atIndex(correspondingFormFieldIndex)
+                .addConstraintViolation();
+    }
+
+    private void buildConstraintViolationHelperSimple(ConstraintValidatorContext context,
+                                                      String messageTemplate,
+                                                      String fields) {
+        context.buildConstraintViolationWithTemplate(
+                messageTemplate)
+                .addPropertyNode(fields)
+                .addConstraintViolation();
     }
 
     private String escapeMessageValue(String value)
@@ -182,10 +193,9 @@ public class CronTaskConfigurationFormValidator
         Optional<CronJobDefinition> cronJobDefinition = cronJobsDefinitionsRegistry.get(id);
         return cronJobDefinition.orElseThrow(() ->
                                              {
-                                                 context.buildConstraintViolationWithTemplate(
-                                                         "Cron job not found")
-                                                        .addPropertyNode("jobClass")
-                                                        .addConstraintViolation();
+                                                 buildConstraintViolationHelperSimple(context,
+                                                         "Cron job not found",
+                                                         "jobClass");
                                                  return new CronTaskDefinitionFormValidatorException();
                                              }
         );
